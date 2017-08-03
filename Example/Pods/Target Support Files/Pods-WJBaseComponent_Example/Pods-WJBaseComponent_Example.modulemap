@@ -1,0 +1,6 @@
+framework module Pods_WJBaseComponent_Example {
+  umbrella header "Pods-WJBaseComponent_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

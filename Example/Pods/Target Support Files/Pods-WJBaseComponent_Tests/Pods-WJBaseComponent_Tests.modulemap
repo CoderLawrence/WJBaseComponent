@@ -1,0 +1,6 @@
+framework module Pods_WJBaseComponent_Tests {
+  umbrella header "Pods-WJBaseComponent_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
