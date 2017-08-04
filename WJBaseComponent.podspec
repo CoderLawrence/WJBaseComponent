@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WJBaseComponent'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '这是一个基础组件库'
 
 # This description is used to generate tags and improve search results.
