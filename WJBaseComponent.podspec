@@ -35,15 +35,31 @@ TODO: Add long description of the pod here.
   s.public_header_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
   s.frameworks = 'UIKit'
 
+  s.subspec 'Macros' do |ss|
+    ss.source_files = 'WJBaseComponent/Classes/Macros/*.h'
+    ss.public_header_files = 'WJBaseComponent/Classes/Macros/*.h'
+  end
+
   s.subspec 'Category' do |ss|
     ss.source_files = 'WJBaseComponent/Classes/Category/*.{h,m}'
     ss.public_header_files = 'WJBaseComponent/Classes/Category/*.h'
     ss.frameworks = 'UIKit'
   end
 
+  s.subspec 'Base' do |ss|
+    ss.frameworks = 'UIKit'
+
+    ss.subspec 'ViewController' do |sss|
+       sss.source_files = 'WJBaseComponent/Classes/Base/ViewController/*.{h,m}'
+       sss.public_header_files = 'WJBaseComponent/Classes/Base/ViewController/*.h'
+       sss.frameworks = 'UIKit'
+    end
+  end
+
   # s.resource_bundles = {
   #   'WJBaseComponent' => ['WJBaseComponent/Assets/*.png']
   # }
 
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SVProgressHUD'
+  s.dependency 'FDFullscreenPopGesture', '~> 1.1'
 end

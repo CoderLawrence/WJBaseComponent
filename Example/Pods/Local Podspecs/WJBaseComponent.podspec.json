@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "requires_arc": true,
   "platforms": {
@@ -22,12 +22,36 @@
   "source_files": "WJBaseComponent/Classes/WJBaseComponent.h",
   "public_header_files": "WJBaseComponent/Classes/WJBaseComponent.h",
   "frameworks": "UIKit",
+  "dependencies": {
+    "SVProgressHUD": [
+
+    ],
+    "FDFullscreenPopGesture": [
+      "~> 1.1"
+    ]
+  },
   "subspecs": [
+    {
+      "name": "Macros",
+      "source_files": "WJBaseComponent/Classes/Macros/*.h",
+      "public_header_files": "WJBaseComponent/Classes/Macros/*.h"
+    },
     {
       "name": "Category",
       "source_files": "WJBaseComponent/Classes/Category/*.{h,m}",
       "public_header_files": "WJBaseComponent/Classes/Category/*.h",
       "frameworks": "UIKit"
+    },
+    {
+      "name": "Base",
+      "subspecs": [
+        {
+          "name": "ViewController",
+          "source_files": "WJBaseComponent/Classes/Base/ViewController/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Base/ViewController/*.h",
+          "frameworks": "UIKit"
+        }
+      ]
     }
   ]
 }
