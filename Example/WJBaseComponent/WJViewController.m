@@ -7,7 +7,6 @@
 //
 
 #import "WJViewController.h"
-#import <WJBaseComponent/NSObject+Dictionary.h>
 
 @interface WJViewController ()
 

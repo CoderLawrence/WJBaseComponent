@@ -1,7 +1,7 @@
 {
   "name": "WJBaseComponent",
   "version": "0.1.0",
-  "summary": "A short description of WJBaseComponent.",
+  "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
   "license": {
@@ -15,8 +15,19 @@
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
     "tag": "0.1.0"
   },
+  "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WJBaseComponent/Classes/**/*"
+  "source_files": "WJBaseComponent/Classes/WJBaseComponent.h",
+  "public_header_files": "WJBaseComponent/Classes/WJBaseComponent.h",
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "Category",
+      "source_files": "WJBaseComponent/Classes/Category/*.{h,m}",
+      "public_header_files": "WJBaseComponent/Classes/Category/*.h",
+      "frameworks": "UIKit"
+    }
+  ]
 }

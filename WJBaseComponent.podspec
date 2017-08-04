@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'WJBaseComponent'
   s.version          = '0.1.0'
-  s.summary          = '只是一个基础组件库'
+  s.summary          = '这是一个基础组件库'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -31,13 +31,19 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'WJBaseComponent/Classes/**/*'
-  
+  s.source_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
+  s.public_header_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
+  s.frameworks = 'UIKit'
+
+  s.subspec 'Category' do |ss|
+    ss.source_files = 'WJBaseComponent/Classes/Category/*.{h,m}'
+    ss.public_header_files = 'WJBaseComponent/Classes/Category/*.h'
+    ss.frameworks = 'UIKit'
+  end
+
   # s.resource_bundles = {
   #   'WJBaseComponent' => ['WJBaseComponent/Assets/*.png']
   # }
 
-  s.public_header_files = 'WJBaseComponent/Classes/**/*.h'
-  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

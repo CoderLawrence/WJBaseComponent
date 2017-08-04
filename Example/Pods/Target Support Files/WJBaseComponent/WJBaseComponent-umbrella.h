@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "WJBaseComponent.h"
 #import "NSData+Extensions.h"
 #import "NSDate+Extensions.h"
 #import "NSJSONSerialization+JSON.h"
