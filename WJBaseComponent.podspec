@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WJBaseComponent'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = '这是一个基础组件库'
 
 # This description is used to generate tags and improve search results.
@@ -34,25 +34,30 @@ TODO: Add long description of the pod here.
   s.source_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
   s.public_header_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
   s.frameworks = 'UIKit'
+  s.dependency 'SVProgressHUD'
+  s.dependency 'FDFullscreenPopGesture', '~> 1.1'
 
-  s.subspec 'Macros' do |ss|
-    ss.source_files = 'WJBaseComponent/Classes/Macros/*.h'
-    ss.public_header_files = 'WJBaseComponent/Classes/Macros/*.h'
+  s.subspec 'Macros' do |macros|
+    macros.source_files = 'WJBaseComponent/Classes/Macros/*.h'
+    macros.public_header_files = 'WJBaseComponent/Classes/Macros/*.h'
   end
 
-  s.subspec 'Category' do |ss|
-    ss.source_files = 'WJBaseComponent/Classes/Category/*.{h,m}'
-    ss.public_header_files = 'WJBaseComponent/Classes/Category/*.h'
-    ss.frameworks = 'UIKit'
+  s.subspec 'Category' do |category|
+    category.source_files = 'WJBaseComponent/Classes/Category/*.{h,m}'
+    category.public_header_files = 'WJBaseComponent/Classes/Category/*.h'
+    category.frameworks = 'UIKit'
   end
 
   s.subspec 'Base' do |ss|
     ss.frameworks = 'UIKit'
 
-    ss.subspec 'ViewController' do |sss|
-       sss.source_files = 'WJBaseComponent/Classes/Base/ViewController/*.{h,m}'
-       sss.public_header_files = 'WJBaseComponent/Classes/Base/ViewController/*.h'
-       sss.frameworks = 'UIKit'
+    ss.subspec 'ViewController' do |viewController|
+       viewController.source_files = 'WJBaseComponent/Classes/Base/ViewController/*.{h,m}'
+       viewController.public_header_files = 'WJBaseComponent/Classes/Base/ViewController/*.h'
+       viewController.frameworks = 'UIKit'
+       viewController.dependency 'SVProgressHUD'
+       viewController.dependency 'FDFullscreenPopGesture', '~> 1.1'
+       viewController.dependency 'WJBaseComponent/Macros'
     end
   end
 
@@ -60,6 +65,4 @@ TODO: Add long description of the pod here.
   #   'WJBaseComponent' => ['WJBaseComponent/Assets/*.png']
   # }
 
-  s.dependency 'SVProgressHUD'
-  s.dependency 'FDFullscreenPopGesture', '~> 1.1'
 end

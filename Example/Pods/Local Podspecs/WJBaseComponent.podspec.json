@@ -44,12 +44,21 @@
     },
     {
       "name": "Base",
+      "frameworks": "UIKit",
       "subspecs": [
         {
           "name": "ViewController",
           "source_files": "WJBaseComponent/Classes/Base/ViewController/*.{h,m}",
           "public_header_files": "WJBaseComponent/Classes/Base/ViewController/*.h",
-          "frameworks": "UIKit"
+          "frameworks": "UIKit",
+          "dependencies": {
+            "SVProgressHUD": [
+
+            ],
+            "FDFullscreenPopGesture": [
+              "~> 1.1"
+            ]
+          }
         }
       ]
     }

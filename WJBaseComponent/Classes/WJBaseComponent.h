@@ -10,7 +10,7 @@
 #define WJBaseComponent_h
 
 #import "Macros.h"
-#import "SVProgressHUD.h"
-#import "UINavigationController+FDFullscreenPopGesture.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 
 #endif /* WJBaseComponent_h */
