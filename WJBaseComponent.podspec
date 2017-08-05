@@ -30,12 +30,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
-  s.public_header_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
   s.frameworks = 'UIKit'
-  s.dependency 'SVProgressHUD'
-  s.dependency 'FDFullscreenPopGesture', '~> 1.1'
 
   s.subspec 'Macros' do |macros|
     macros.source_files = 'WJBaseComponent/Classes/Macros/*.h'

@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,23 +13,13 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.2.0"
+    "tag": "0.3.0"
   },
   "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WJBaseComponent/Classes/WJBaseComponent.h",
-  "public_header_files": "WJBaseComponent/Classes/WJBaseComponent.h",
   "frameworks": "UIKit",
-  "dependencies": {
-    "SVProgressHUD": [
-
-    ],
-    "FDFullscreenPopGesture": [
-      "~> 1.1"
-    ]
-  },
   "subspecs": [
     {
       "name": "Macros",
@@ -57,6 +47,9 @@
             ],
             "FDFullscreenPopGesture": [
               "~> 1.1"
+            ],
+            "WJBaseComponent/Macros": [
+
             ]
           }
         }

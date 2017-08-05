@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "WJBaseComponent.h"
 #import "WJBaseViewController.h"
 #import "WJNavigationViewController.h"
 #import "NSData+Extensions.h"
