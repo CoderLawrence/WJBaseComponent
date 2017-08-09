@@ -19,7 +19,8 @@
   "platforms": {
     "ios": "8.0"
   },
-  "frameworks": "UIKit",
+  "source_files": "WJBaseComponent/Classes/WJBaseComponent.h",
+  "public_header_files": "WJBaseComponent/Classes/WJBaseComponent.h",
   "subspecs": [
     {
       "name": "Macros",
@@ -29,8 +30,7 @@
     {
       "name": "Category",
       "source_files": "WJBaseComponent/Classes/Category/*.{h,m}",
-      "public_header_files": "WJBaseComponent/Classes/Category/*.h",
-      "frameworks": "UIKit"
+      "public_header_files": "WJBaseComponent/Classes/Category/*.h"
     },
     {
       "name": "Base",

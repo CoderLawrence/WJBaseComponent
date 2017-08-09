@@ -34,7 +34,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   WJBaseComponent:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
@@ -43,8 +43,8 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  WJBaseComponent: 9d43afd2905339e77cb8a096d74b83376cd68b03
+  WJBaseComponent: 64c829369fdf0bb17e1cb4fca21a9040b8cbd566
 
 PODFILE CHECKSUM: 37e3bfb8a1914fb212e8d4d8f149dbffd147d35f
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.2.0

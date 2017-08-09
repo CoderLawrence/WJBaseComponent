@@ -1,16 +1,14 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
+//
+//  WJBaseComponent.h
+//  Pods
+//
+//  Created by Lawrence on 2017/8/8.
+//
+//
 
-#import "WJBaseComponent.h"
+#ifndef WJBaseComponent_h
+#define WJBaseComponent_h
+
 #import "WJBaseViewController.h"
 #import "WJNavigationViewController.h"
 #import "NSData+Extensions.h"
@@ -27,6 +25,4 @@
 #import "NotificatonMacros.h"
 #import "UtilsMacros.h"
 
-FOUNDATION_EXPORT double WJBaseComponentVersionNumber;
-FOUNDATION_EXPORT const unsigned char WJBaseComponentVersionString[];
-
+#endif /* WJBaseComponent_h */

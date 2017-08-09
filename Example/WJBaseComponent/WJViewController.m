@@ -7,6 +7,7 @@
 //
 
 #import "WJViewController.h"
+#import <WJBaseComponent/WJBaseComponent.h>
 
 @interface WJViewController ()
 
