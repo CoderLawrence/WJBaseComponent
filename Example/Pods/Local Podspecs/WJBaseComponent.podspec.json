@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,14 +13,14 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.3.0"
+    "tag": "0.4.0"
   },
   "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WJBaseComponent/Classes/WJBaseComponent.h",
-  "public_header_files": "WJBaseComponent/Classes/WJBaseComponent.h",
+  "source_files": "WJBaseComponent/Classes/**/*",
+  "public_header_files": "WJBaseComponent/**/*",
   "subspecs": [
     {
       "name": "Macros",
