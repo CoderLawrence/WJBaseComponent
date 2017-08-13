@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WJBaseComponent'
-  s.version          = '0.4.0'
+  s.version          = '0.5.0'
   s.summary          = '这是一个基础组件库'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'WJBaseComponent/Classes/**/*'
+  s.source_files = 'WJBaseComponent/Classes/WJBaseComponent.h'
   #s.public_header_files = 'WJBaseComponent/**/*'
 
   s.subspec 'Macros' do |macros|
@@ -56,8 +56,8 @@ TODO: Add long description of the pod here.
     end
   end
 
-  # s.resource_bundles = {
-  #   'WJBaseComponent' => ['WJBaseComponent/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'WJBaseComponent' => ['WJBaseComponent/Assets/*.png']
+   }
 
 end

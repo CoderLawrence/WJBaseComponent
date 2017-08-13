@@ -26,6 +26,8 @@
 #define WJColor(r, g, b, a) ([UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a])
 ///背景灰色
 #define WJGlobalColor (WJColor(245, 245, 245, 1))
+///统一红色颜色
+#define WJGlobalRadColor (WJColor(245.0f, 80.0f, 83.0f, 1.0f))
 
 // weak strong
 #define __WEAKSELF(X) __weak __typeof(X) weakSelf = X;
