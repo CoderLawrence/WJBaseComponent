@@ -150,7 +150,9 @@
 		AC0AB78F3A7629ED1C7F3F82BBB3F471 /* EXPMatchers+beSupersetOf.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13613A8177C38D5EEA11E47676DB50 /* EXPMatchers+beSupersetOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE7BBD46BA00A9AC69249ADA56402162 /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D7212F579242A80CFE2C296A811CF8 /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFC210B5F708E0450BE4EC4B /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC2107794D70733673D9FAF /* UIView+Frame.m */; };
+		AFC21637F5800A2694417EF3 /* NSObject+ReplaceNullProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC21A52EBDE198464E75449 /* NSObject+ReplaceNullProperty.m */; };
 		AFC217B4FF1208F39C88B3FE /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC2191ACCB716309D310558 /* UIView+Frame.h */; };
+		AFC21BF4AAD37E99883CCE25 /* NSObject+ReplaceNullProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC21FE44A319BC23C2F4462 /* NSObject+ReplaceNullProperty.h */; };
 		B0A640A9C077829CC22F354C236F7D52 /* checkUserType_backward_9x15_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E64CCD09075DBB598A6CB332E418DA /* checkUserType_backward_9x15_@2x.png */; };
 		B1487AC2DD502CCE46631C123E047D28 /* EXPMatchers+beFalsy.h in Headers */ = {isa = PBXBuildFile; fileRef = A355B54F4E45CF3683C6608C78321F52 /* EXPMatchers+beFalsy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B376B4A777F62028AF0965D93658413E /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 94828F00F44EF0B57BAD537768E8D2E4 /* SPTExample.m */; };
@@ -471,6 +473,8 @@
 		AF164F4FCB1C60450C98D7B44B2A642C /* EXPMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = Expecta/EXPMatcher.h; sourceTree = "<group>"; };
 		AFC2107794D70733673D9FAF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		AFC2191ACCB716309D310558 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		AFC21A52EBDE198464E75449 /* NSObject+ReplaceNullProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ReplaceNullProperty.m"; sourceTree = "<group>"; };
+		AFC21FE44A319BC23C2F4462 /* NSObject+ReplaceNullProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ReplaceNullProperty.h"; sourceTree = "<group>"; };
 		B0ABF99953E7C66082441E2D512081EE /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "Expecta/Matchers/EXPMatchers+beNil.h"; sourceTree = "<group>"; };
 		B0ED8D7E5AFBFA68FB087170BC4A0503 /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
 		B190E1084D85E2981CADF0E9181AF729 /* NSValue+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+Expecta.h"; path = "Expecta/NSValue+Expecta.h"; sourceTree = "<group>"; };
@@ -1093,6 +1097,8 @@
 				B6A439B1F52AFF5FDE1484D47A4086BF /* UIViewController+RunDealloc.m */,
 				AFC2107794D70733673D9FAF /* UIView+Frame.m */,
 				AFC2191ACCB716309D310558 /* UIView+Frame.h */,
+				AFC21A52EBDE198464E75449 /* NSObject+ReplaceNullProperty.m */,
+				AFC21FE44A319BC23C2F4462 /* NSObject+ReplaceNullProperty.h */,
 			);
 			name = Category;
 			path = Category;
@@ -1343,6 +1349,7 @@
 				92C22BDCB2FEA4A9A5F4DFF1FF91749A /* WJNavigationViewController.h in Headers */,
 				E80FB1BFEC6AF6021D6450827C03DC7F /* WJTabBarController.h in Headers */,
 				AFC217B4FF1208F39C88B3FE /* UIView+Frame.h in Headers */,
+				AFC21BF4AAD37E99883CCE25 /* NSObject+ReplaceNullProperty.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1727,6 +1734,7 @@
 				B82BF2ED891B40E28A234D2A4D92E75A /* WJNavigationViewController.m in Sources */,
 				519468B6D700A31790BDD1D175412DDC /* WJTabBarController.m in Sources */,
 				AFC210B5F708E0450BE4EC4B /* UIView+Frame.m in Sources */,
+				AFC21637F5800A2694417EF3 /* NSObject+ReplaceNullProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
