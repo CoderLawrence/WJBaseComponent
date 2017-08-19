@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WJBaseComponent'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = '这是一个基础组件库'
 
 # This description is used to generate tags and improve search results.
@@ -53,6 +53,15 @@ TODO: Add long description of the pod here.
        viewController.dependency 'SVProgressHUD'
        viewController.dependency 'FDFullscreenPopGesture', '~> 1.1'
        viewController.dependency 'WJBaseComponent/Macros'
+    end
+  end
+
+  s.subspec 'Tools' do |tools|
+
+    tools.subspec 'WJUserDefaults' do |userDefaults|
+        userDefaults.source_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults.{h,m}'
+        userDefaults.public_header_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults.h'
+#  userDefaults.frameworks = 'NSFoundation'
     end
   end
 

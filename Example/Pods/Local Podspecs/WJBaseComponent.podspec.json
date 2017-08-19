@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.5.0"
+    "tag": "0.6.0"
   },
   "requires_arc": true,
   "platforms": {
@@ -56,6 +56,16 @@
 
             ]
           }
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "subspecs": [
+        {
+          "name": "WJUserDefaults",
+          "source_files": "WJBaseComponent/Classes/Tools/WJUserDefaults.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Tools/WJUserDefaults.h"
         }
       ]
     }

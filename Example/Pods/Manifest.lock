@@ -12,18 +12,22 @@ PODS:
   - FDFullscreenPopGesture (1.1)
   - Specta (1.0.6)
   - SVProgressHUD (2.1.2)
-  - WJBaseComponent (0.5.0):
-    - WJBaseComponent/Base (= 0.5.0)
-    - WJBaseComponent/Category (= 0.5.0)
-    - WJBaseComponent/Macros (= 0.5.0)
-  - WJBaseComponent/Base (0.5.0):
-    - WJBaseComponent/Base/ViewController (= 0.5.0)
-  - WJBaseComponent/Base/ViewController (0.5.0):
+  - WJBaseComponent (0.6.0):
+    - WJBaseComponent/Base (= 0.6.0)
+    - WJBaseComponent/Category (= 0.6.0)
+    - WJBaseComponent/Macros (= 0.6.0)
+    - WJBaseComponent/Tools (= 0.6.0)
+  - WJBaseComponent/Base (0.6.0):
+    - WJBaseComponent/Base/ViewController (= 0.6.0)
+  - WJBaseComponent/Base/ViewController (0.6.0):
     - FDFullscreenPopGesture (~> 1.1)
     - SVProgressHUD
     - WJBaseComponent/Macros
-  - WJBaseComponent/Category (0.5.0)
-  - WJBaseComponent/Macros (0.5.0)
+  - WJBaseComponent/Category (0.6.0)
+  - WJBaseComponent/Macros (0.6.0)
+  - WJBaseComponent/Tools (0.6.0):
+    - WJBaseComponent/Tools/WJUserDefaults (= 0.6.0)
+  - WJBaseComponent/Tools/WJUserDefaults (0.6.0)
 
 DEPENDENCIES:
   - Expecta
@@ -43,7 +47,7 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  WJBaseComponent: 5f76fa32439785f76d8ec98f927cd3cd74da7c27
+  WJBaseComponent: e60c7243c66d66895c6481bb8f682354b7b99575
 
 PODFILE CHECKSUM: 37e3bfb8a1914fb212e8d4d8f149dbffd147d35f
 
