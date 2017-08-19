@@ -64,8 +64,8 @@
       "subspecs": [
         {
           "name": "WJUserDefaults",
-          "source_files": "WJBaseComponent/Classes/Tools/WJUserDefaults.{h,m}",
-          "public_header_files": "WJBaseComponent/Classes/Tools/WJUserDefaults.h"
+          "source_files": "WJBaseComponent/Classes/Tools/WJUserDefaults/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Tools/WJUserDefaults/*.h"
         }
       ]
     }

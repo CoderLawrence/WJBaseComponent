@@ -59,8 +59,8 @@ TODO: Add long description of the pod here.
   s.subspec 'Tools' do |tools|
 
     tools.subspec 'WJUserDefaults' do |userDefaults|
-        userDefaults.source_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults.{h,m}'
-        userDefaults.public_header_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults.h'
+        userDefaults.source_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults/*.{h,m}'
+        userDefaults.public_header_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults/*.h'
 #  userDefaults.frameworks = 'NSFoundation'
     end
   end
