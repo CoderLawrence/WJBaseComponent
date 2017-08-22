@@ -32,6 +32,7 @@
 #import "WJNetworkKit.h"
 #import "WJBaseRequest.h"
 #import "WJBaseResponse.h"
+#import "WJBaseUrl.h"
 #import "WJNetworkConnection.h"
 #import "WJUserDefaults.h"
 
