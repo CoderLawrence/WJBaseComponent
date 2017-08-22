@@ -24,5 +24,6 @@
 #import "Macros.h"
 #import "NotificatonMacros.h"
 #import "UtilsMacros.h"
+#import "WJNetworkKit.h"
 
 #endif /* WJBaseComponent_h */

@@ -61,7 +61,22 @@ TODO: Add long description of the pod here.
     tools.subspec 'WJUserDefaults' do |userDefaults|
         userDefaults.source_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults/*.{h,m}'
         userDefaults.public_header_files = 'WJBaseComponent/Classes/Tools/WJUserDefaults/*.h'
-#  userDefaults.frameworks = 'NSFoundation'
+    end
+
+    tools.subspec 'Network' do |network|
+       network.source_files = 'WJBaseComponent/Classes/Tools/Network/WJNetworkKit.h'
+       network.public_header_files = 'WJBaseComponent/Classes/Tools/Network/WJNetworkKit.h'
+
+       network.subspec 'Base' do |base|
+            base.source_files = 'WJBaseComponent/Classes/Tools/Network/Base/*.{h,m}'
+            base.public_header_files = 'WJBaseComponent/Classes/Tools/Network/Base/*.h'
+       end
+
+       network.subspec 'Core' do |core|
+            core.source_files = 'WJBaseComponent/Classes/Tools/Network/Core/*.{h,m}'
+            core.public_header_files = 'WJBaseComponent/Classes/Tools/Network/Core/*.h'
+            core.dependency 'AFNetworking'
+       end
     end
   end
 

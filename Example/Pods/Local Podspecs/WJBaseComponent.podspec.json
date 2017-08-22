@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.6.0"
+    "tag": "0.7.0"
   },
   "requires_arc": true,
   "platforms": {
@@ -66,6 +66,28 @@
           "name": "WJUserDefaults",
           "source_files": "WJBaseComponent/Classes/Tools/WJUserDefaults/*.{h,m}",
           "public_header_files": "WJBaseComponent/Classes/Tools/WJUserDefaults/*.h"
+        },
+        {
+          "name": "Network",
+          "source_files": "WJBaseComponent/Classes/Tools/Network/WJNetworkKit.h",
+          "public_header_files": "WJBaseComponent/Classes/Tools/Network/WJNetworkKit.h",
+          "subspecs": [
+            {
+              "name": "Base",
+              "source_files": "WJBaseComponent/Classes/Tools/Network/Base/*.{h,m}",
+              "public_header_files": "WJBaseComponent/Classes/Tools/Network/Base/*.h"
+            },
+            {
+              "name": "Core",
+              "source_files": "WJBaseComponent/Classes/Tools/Network/Core/*.{h,m}",
+              "public_header_files": "WJBaseComponent/Classes/Tools/Network/Core/*.h",
+              "dependencies": {
+                "AFNetworking": [
+
+                ]
+              }
+            }
+          ]
         }
       ]
     }

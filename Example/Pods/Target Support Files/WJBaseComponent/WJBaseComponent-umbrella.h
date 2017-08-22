@@ -29,6 +29,10 @@
 #import "Macros.h"
 #import "NotificatonMacros.h"
 #import "UtilsMacros.h"
+#import "WJNetworkKit.h"
+#import "WJBaseRequest.h"
+#import "WJBaseResponse.h"
+#import "WJNetworkConnection.h"
 #import "WJUserDefaults.h"
 
 FOUNDATION_EXPORT double WJBaseComponentVersionNumber;

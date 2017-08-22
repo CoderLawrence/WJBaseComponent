@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Expecta (1.0.6)
   - Expecta+Snapshots (3.1.1):
     - Expecta (~> 1.0)
@@ -12,22 +27,29 @@ PODS:
   - FDFullscreenPopGesture (1.1)
   - Specta (1.0.6)
   - SVProgressHUD (2.1.2)
-  - WJBaseComponent (0.6.0):
-    - WJBaseComponent/Base (= 0.6.0)
-    - WJBaseComponent/Category (= 0.6.0)
-    - WJBaseComponent/Macros (= 0.6.0)
-    - WJBaseComponent/Tools (= 0.6.0)
-  - WJBaseComponent/Base (0.6.0):
-    - WJBaseComponent/Base/ViewController (= 0.6.0)
-  - WJBaseComponent/Base/ViewController (0.6.0):
+  - WJBaseComponent (0.7.0):
+    - WJBaseComponent/Base (= 0.7.0)
+    - WJBaseComponent/Category (= 0.7.0)
+    - WJBaseComponent/Macros (= 0.7.0)
+    - WJBaseComponent/Tools (= 0.7.0)
+  - WJBaseComponent/Base (0.7.0):
+    - WJBaseComponent/Base/ViewController (= 0.7.0)
+  - WJBaseComponent/Base/ViewController (0.7.0):
     - FDFullscreenPopGesture (~> 1.1)
     - SVProgressHUD
     - WJBaseComponent/Macros
-  - WJBaseComponent/Category (0.6.0)
-  - WJBaseComponent/Macros (0.6.0)
-  - WJBaseComponent/Tools (0.6.0):
-    - WJBaseComponent/Tools/WJUserDefaults (= 0.6.0)
-  - WJBaseComponent/Tools/WJUserDefaults (0.6.0)
+  - WJBaseComponent/Category (0.7.0)
+  - WJBaseComponent/Macros (0.7.0)
+  - WJBaseComponent/Tools (0.7.0):
+    - WJBaseComponent/Tools/Network (= 0.7.0)
+    - WJBaseComponent/Tools/WJUserDefaults (= 0.7.0)
+  - WJBaseComponent/Tools/Network (0.7.0):
+    - WJBaseComponent/Tools/Network/Base (= 0.7.0)
+    - WJBaseComponent/Tools/Network/Core (= 0.7.0)
+  - WJBaseComponent/Tools/Network/Base (0.7.0)
+  - WJBaseComponent/Tools/Network/Core (0.7.0):
+    - AFNetworking
+  - WJBaseComponent/Tools/WJUserDefaults (0.7.0)
 
 DEPENDENCIES:
   - Expecta
@@ -38,17 +60,18 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   WJBaseComponent:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  WJBaseComponent: 5b6ceb6d41c0479b10d9b6f13a9002103b67846a
+  WJBaseComponent: 3020a425fb0924d2f7181ca4932cc744d5345dee
 
 PODFILE CHECKSUM: 37e3bfb8a1914fb212e8d4d8f149dbffd147d35f
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.2.0
