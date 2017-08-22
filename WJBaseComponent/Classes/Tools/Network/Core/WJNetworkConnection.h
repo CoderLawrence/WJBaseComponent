@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "WJBaseUrl.h"
 
 /**
  请求结果枚举
@@ -20,11 +21,11 @@ typedef NS_ENUM(NSUInteger, WJRequestResult) {
     WJRequestResultFail,
 };
 
-typedef void (^Callback)(NSInteger error, id result);
-typedef void (^BeforeSendCallback)(void);
-typedef void (^SuccessCallback)(id result);
-typedef void (^ErrorCallback)(NSError *error);
-typedef void (CompleteCallback)(NSError *error, id result);
+typedef void (^Callback)(NSInteger error, id result);        //回调信息
+typedef void (^BeforeSendCallback)(void);                    //开始请求回调
+typedef void (^SuccessCallback)(id result);                  //请求成功回调
+typedef void (^ErrorCallback)(NSError *error);               //请求失败回调
+typedef void (CompleteCallback)(NSError *error, id result);  //请求完成回调
 
 @interface WJNetworkConnection : NSObject
 
@@ -43,5 +44,21 @@ typedef void (CompleteCallback)(NSError *error, id result);
                successCallback:(SuccessCallback)successCallback
                  errorCallback:(ErrorCallback)errorCallback
               completeCallback:(CompleteCallback)completeCallback;
+
+/**
+ 发送get请求
+
+ @param url 请求地址
+ @param parameters 请求参数
+ @param beforeSendCallback 开始请求回调
+ @param successCallback 请求成功回调
+ @param errorCallback 请求失败回调
+ @param completeCallback 请求完成回调
+ */
++ (void)sendGetRequestWithUrl:(NSString *)url parameters:(NSDictionary *)parameters
+           beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+              successCallback:(SuccessCallback)successCallback
+                errorCallback:(ErrorCallback)errorCallback
+             completeCallback:(CompleteCallback)completeCallback;
 
 @end
