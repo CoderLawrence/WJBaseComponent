@@ -11,5 +11,7 @@
 
 #import "WJBaseRequest.h"
 #import "WJBaseResponse.h"
+#import "WJNetworkConnection.h"
+#import "WJNetworkConnection+Model.h"
 
 #endif /* WJNetworkKit_h */

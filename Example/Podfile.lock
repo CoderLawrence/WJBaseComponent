@@ -49,7 +49,11 @@ PODS:
   - WJBaseComponent/Tools/Network/Base (0.7.0)
   - WJBaseComponent/Tools/Network/Core (0.7.0):
     - AFNetworking
+    - YYKit
   - WJBaseComponent/Tools/WJUserDefaults (0.7.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - Expecta
@@ -70,7 +74,8 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  WJBaseComponent: 3020a425fb0924d2f7181ca4932cc744d5345dee
+  WJBaseComponent: 62b7e0d282e27254ed64a7782dd736bf1ae78ffd
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 37e3bfb8a1914fb212e8d4d8f149dbffd147d35f
 

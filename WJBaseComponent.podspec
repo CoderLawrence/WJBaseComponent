@@ -75,7 +75,10 @@ TODO: Add long description of the pod here.
        network.subspec 'Core' do |core|
             core.source_files = 'WJBaseComponent/Classes/Tools/Network/Core/*.{h,m}'
             core.public_header_files = 'WJBaseComponent/Classes/Tools/Network/Core/*.h'
+            core.dependency 'WJBaseComponent/Tools/Network/Base'
+            core.dependency 'SVProgressHUD'
             core.dependency 'AFNetworking'
+            core.dependency 'YYKit'
        end
     end
   end

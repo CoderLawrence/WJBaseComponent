@@ -7,8 +7,59 @@
 //
 
 #import "WJNetworkConnection.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @implementation WJNetworkConnection
+
+static id _instance = nil;
+
++ (instancetype)networkManager {
+    return [[self alloc] init];
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    
+    return _instance;
+}
+
+- (instancetype)init {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super init];
+        
+        //监听网络状态
+        AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager manager];
+        [manager startMonitoring];
+        [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            switch (status) {
+                case AFNetworkReachabilityStatusUnknown: {
+                    [SVProgressHUD showErrorWithStatus:@"网络开小差了!"];
+                }
+                    break;
+                case AFNetworkReachabilityStatusNotReachable: {
+                    [SVProgressHUD showErrorWithStatus:@"请检查您的网络状态！"];
+                }
+                    break;
+                case AFNetworkReachabilityStatusReachableViaWiFi: {
+                    NSLog(@"当前使用的是2G/3G/4G网络");
+                }
+                    break;
+                case AFNetworkReachabilityStatusReachableViaWWAN: {
+                    NSLog(@"当前在WIFI网络下");
+                }
+                    break;
+                default:
+                    break;
+            }
+        }];
+    });
+    
+    return _instance;
+}
 
 /**
  发送post请求
@@ -20,7 +71,7 @@
  @param errorCallback 请求失败回调
  @param completeCallback 请求完成回调
  */
-+ (void)sendPostRequestWithUrl:(NSString *)url parameters:(NSDictionary *)parameters
+- (void)sendPostRequestWithUrl:(NSString *)url parameters:(NSDictionary *)parameters
             beforeSendCallback:(BeforeSendCallback)beforeSendCallback
                successCallback:(SuccessCallback)successCallback
                  errorCallback:(ErrorCallback)errorCallback
@@ -69,7 +120,7 @@
  @param errorCallback 请求失败回调
  @param completeCallback 请求完成回调
  */
-+ (void)sendGetRequestWithUrl:(NSString *)url parameters:(NSDictionary *)parameters
+- (void)sendGetRequestWithUrl:(NSString *)url parameters:(NSDictionary *)parameters
            beforeSendCallback:(BeforeSendCallback)beforeSendCallback
               successCallback:(SuccessCallback)successCallback
                 errorCallback:(ErrorCallback)errorCallback
