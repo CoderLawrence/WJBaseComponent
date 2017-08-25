@@ -14,7 +14,7 @@
     return WJRequestCachePolicyReloadIgnoringLocalCacheData; //不缓存response数据
 }
 
-- (NSUInteger)cacheTimeOutInteval {
+- (NSUInteger)cacheTimeOutInterval {
     return 0;
 }
 

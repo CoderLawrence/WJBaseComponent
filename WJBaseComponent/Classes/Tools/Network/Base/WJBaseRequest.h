@@ -29,6 +29,6 @@ typedef NS_ENUM(NSUInteger, WJRequestCachePolicy) {
 /**
  缓存超时时间 以天为单位：86400 秒
  */
-@property (nonatomic, assign) NSUInteger cacheTimeOutInteval;
+@property (nonatomic, assign) NSUInteger cacheTimeOutInterval;
 
 @end

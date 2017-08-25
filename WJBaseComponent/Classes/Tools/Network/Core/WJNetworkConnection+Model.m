@@ -35,7 +35,7 @@
         
     }
     
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel modelToJSONObject]];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel yy_modelToJSONObject]];
     [parameters removeObjectForKey:@"cachePolicy"];
     [parameters removeObjectForKey:@"cacheTimeOutInterval"];
     
@@ -44,7 +44,7 @@
               beforeSendCallback:beforeSendCallback
                  successCallback:^(id result) {
                      if (successCallback) {
-                         WJBaseResponse *response = [responseModel modelWithJSON:result];
+                         WJBaseResponse *response = [responseModel yy_modelWithJSON:result];
                          successCallback(response);
                      }
                  } errorCallback:^(NSError *error) {
@@ -53,7 +53,7 @@
                      }
                  } completeCallback:^(NSError *error, id result) {
                      if (completeCallback) {
-                         WJBaseResponse *response = [WJBaseResponse modelWithJSON:result];
+                         WJBaseResponse *response = [responseModel yy_modelWithJSON:result];
                          completeCallback(error, response);
                      }
                  }];
@@ -84,7 +84,7 @@
         
     }
     
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel modelToJSONObject]];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel yy_modelToJSONObject]];
     [parameters removeObjectForKey:@"cachePolicy"];
     [parameters removeObjectForKey:@"cacheTimeOutInterval"];
     
@@ -93,7 +93,7 @@
              beforeSendCallback:beforeSendCallback
                 successCallback:^(id result) {
                     if (successCallback) {
-                        WJBaseResponse *response = [responseModel modelWithJSON:result];
+                        WJBaseResponse *response = [responseModel yy_modelWithJSON:result];
                         successCallback(response);
                     }
                 } errorCallback:^(NSError *error) {
@@ -102,7 +102,7 @@
                     }
                 } completeCallback:^(NSError *error, id result) {
                     if (completeCallback) {
-                        WJBaseResponse *response = [WJBaseResponse modelWithJSON:result];
+                        WJBaseResponse *response = [responseModel yy_modelWithJSON:result];
                         completeCallback(error, response);
                     }
                 }];

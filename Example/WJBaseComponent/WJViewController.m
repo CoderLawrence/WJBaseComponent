@@ -8,6 +8,7 @@
 
 #import "WJViewController.h"
 #import <WJBaseComponent/WJBaseComponent.h>
+#import "WJClassInfosResponse.h"
 
 @interface WJViewController ()
 
@@ -18,7 +19,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    WJBaseRequest *request = [[WJBaseRequest alloc] init];
+    
+    [[WJNetworkConnection networkManager] sendGetRequestWithUrl:@"http://next-retail.scho.com.cn:80/front/xwTypeDefine/queryXwTypeList" requestModel:request responseModel:[WJClassInfosResponse class] beforeSendCallback:^{
+        
+    } successCallback:^(id result) {
+        NSLog(@"result = %@", result);
+    } errorCallback:^(NSError *error) {
+        
+    } completeCallback:^(NSError *error, id result) {
+        NSLog(@"result = %@", result);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

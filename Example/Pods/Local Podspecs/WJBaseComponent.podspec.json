@@ -82,10 +82,16 @@
               "source_files": "WJBaseComponent/Classes/Tools/Network/Core/*.{h,m}",
               "public_header_files": "WJBaseComponent/Classes/Tools/Network/Core/*.h",
               "dependencies": {
+                "WJBaseComponent/Tools/Network/Base": [
+
+                ],
+                "SVProgressHUD": [
+
+                ],
                 "AFNetworking": [
 
                 ],
-                "YYKit": [
+                "YYModel": [
 
                 ]
               }

@@ -78,7 +78,7 @@ TODO: Add long description of the pod here.
             core.dependency 'WJBaseComponent/Tools/Network/Base'
             core.dependency 'SVProgressHUD'
             core.dependency 'AFNetworking'
-            core.dependency 'YYKit'
+            core.dependency 'YYModel'
        end
     end
   end

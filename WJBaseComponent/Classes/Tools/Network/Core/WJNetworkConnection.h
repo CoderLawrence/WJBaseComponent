@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
-#import <YYKit/YYKit.h>
+#import <YYModel/YYModel.h>
 
 //请求超时时间
 #define DYLY_REQUEST_TIMEOUT                 10
