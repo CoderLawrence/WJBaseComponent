@@ -10,7 +10,7 @@
 
 @implementation NSData (Extensions)
 
-- (NSString *)contentTypeForImageData:(NSData *)data
++ (NSString *)contentTypeForImageData:(NSData *)data
 {
     uint8_t c;
     [data getBytes:&c length:1];

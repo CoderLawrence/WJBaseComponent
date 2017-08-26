@@ -16,6 +16,6 @@
  @param data 图片字节
  @return 图片扩展名
  */
-- (NSString *)contentTypeForImageData:(NSData *)data;
++ (NSString *)contentTypeForImageData:(NSData *)data;
 
 @end
