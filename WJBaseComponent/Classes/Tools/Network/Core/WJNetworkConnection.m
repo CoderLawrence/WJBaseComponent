@@ -273,6 +273,15 @@ static id _instance = nil;
     
     if (!photoImages.count) {
         NSLog(@"没有可上传的图片，请确认是否有图片资源");
+        
+        if (errorCallback) {
+            errorCallback(nil);
+        }
+        
+        if (completeCallback) {
+            completeCallback(nil, nil);
+        }
+        
         return;
     }
     
