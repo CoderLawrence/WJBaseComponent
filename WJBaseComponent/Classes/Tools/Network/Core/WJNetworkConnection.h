@@ -73,27 +73,9 @@ typedef void (^ProgressCallback)(NSProgress *progress);
                 errorCallback:(ErrorCallback)errorCallback
              completeCallback:(CompleteCallback)completeCallback;
 
-/**
- 上传文件
- 
- @param url 请求地址
- @param parameters 请求参数
- @param uploadParams 上传文件参数
- @param beforeSendCallback 开始上传回调
- @param successCallback 上传成功回调
- @param errorCallback 上传失败回调
- @param completeCallback 上传完成回调
- */
-- (void)sendUploadRequestWithUrl:(NSString *)url
-                      parameters:(NSDictionary *)parameters
-                    uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
-              beforeSendCallback:(BeforeSendCallback)beforeSendCallback
-                 successCallback:(SuccessCallback)successCallback
-                   errorCallback:(ErrorCallback)errorCallback
-                completeCallback:(CompleteCallback)completeCallback;
 
 /**
- 上传文件
+ 批量上传文件
  
  @param url 请求地址
  @param parameters 请求参数
@@ -104,33 +86,77 @@ typedef void (^ProgressCallback)(NSProgress *progress);
  @param errorCallback 上传失败回调
  @param completeCallback 上传完成回调
  */
-- (void)sendUploadRequestWithUrl:(NSString *)url
-                      parameters:(NSDictionary *)parameters
-                    uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
-                progressCallback:(ProgressCallback)progressCallback
-              beforeSendCallback:(BeforeSendCallback)beforeSendCallback
-                 successCallback:(SuccessCallback)successCallback
-                   errorCallback:(ErrorCallback)errorCallback
-                completeCallback:(CompleteCallback)completeCallback;
+- (void)sendUploadDatasRequestWithUrl:(NSString *)url
+                           parameters:(NSDictionary *)parameters
+                         uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
+                     progressCallback:(ProgressCallback)progressCallback
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback;
 
 /**
- 上传多张图片
+ 上传文件
  
  @param url 请求地址
+ @param parameters 请求参数
+ @param uploadParam 上传文件参数
+ @param progressCallback 上传进度回调
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 上传成功回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadDataRequestWithUrl:(NSString *)url
+                          parameters:(NSDictionary *)parameters
+                         uploadParam:(WJBaseUploadParam *)uploadParam
+                    progressCallback:(ProgressCallback)progressCallback
+                  beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                     successCallback:(SuccessCallback)successCallback
+                       errorCallback:(ErrorCallback)errorCallback
+                    completeCallback:(CompleteCallback)completeCallback;
+
+/**
+ 批量上传图片
+ 
+ @param url 请求地址
+ @param name 服务器对应的字段的名称
+ @param fileName 图片的服务器名称
  @param paramters 请求参数
- @param photoImages 图片
- @param name 服务器接收的字段名
- @param fileName 文件对应服务器名称
+ @param photoImages 上传的图片
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 完成上传回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadImagesRequestWithUrl:(NSString *)url
+                                 name:(NSString *)name
+                             fileName:(NSString *)fileName
+                           parameters:(NSDictionary *)paramters
+                          photoImages:(NSArray *)photoImages
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback;
+
+/**
+ 上传图片
+
+ @param url 请求地址
+ @param name 服务器对应的字段名称
+ @param fileName 图片的服务器名称
+ @param image 图片
+ @param paramters 请求参数
  @param beforeSendCallback 开始上传回调
  @param successCallback 完成上传回调
  @param errorCallback 上传失败回调
  @param completeCallback 上传完成回调
  */
 - (void)sendUploadImageRequestWithUrl:(NSString *)url
-                           parameters:(NSDictionary *)paramters
-                          photoImages:(NSArray *)photoImages
                                  name:(NSString *)name
                              fileName:(NSString *)fileName
+                                image:(UIImage *)image
+                           parameters:(NSDictionary *)paramters
                    beforeSendCallback:(BeforeSendCallback)beforeSendCallback
                       successCallback:(SuccessCallback)successCallback
                         errorCallback:(ErrorCallback)errorCallback

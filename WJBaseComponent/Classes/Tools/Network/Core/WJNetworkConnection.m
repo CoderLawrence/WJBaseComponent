@@ -8,7 +8,6 @@
 
 #import "WJNetworkConnection.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "NSData+Extensions.h"
 
 @implementation WJNetworkConnection
 
@@ -160,28 +159,7 @@ static id _instance = nil;
 }
 
 /**
- 上传文件
-
- @param url 请求地址
- @param parameters 请求参数
- @param uploadParams 上传文件参数
- @param beforeSendCallback 开始上传回调
- @param successCallback 上传成功回调
- @param errorCallback 上传失败回调
- @param completeCallback 上传完成回调
- */
-- (void)sendUploadRequestWithUrl:(NSString *)url
-                      parameters:(NSDictionary *)parameters
-                    uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
-              beforeSendCallback:(BeforeSendCallback)beforeSendCallback
-                 successCallback:(SuccessCallback)successCallback
-                   errorCallback:(ErrorCallback)errorCallback
-                completeCallback:(CompleteCallback)completeCallback {
-    [self sendUploadRequestWithUrl:url parameters:parameters uploadParams:uploadParams progressCallback:nil beforeSendCallback:beforeSendCallback successCallback:successCallback errorCallback:errorCallback completeCallback:completeCallback];
-}
-
-/**
- 上传文件
+ 批量上传文件
  
  @param url 请求地址
  @param parameters 请求参数
@@ -192,14 +170,14 @@ static id _instance = nil;
  @param errorCallback 上传失败回调
  @param completeCallback 上传完成回调
  */
-- (void)sendUploadRequestWithUrl:(NSString *)url
-                      parameters:(NSDictionary *)parameters
-                    uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
-                progressCallback:(ProgressCallback)progressCallback
-              beforeSendCallback:(BeforeSendCallback)beforeSendCallback
-                 successCallback:(SuccessCallback)successCallback
-                   errorCallback:(ErrorCallback)errorCallback
-                completeCallback:(CompleteCallback)completeCallback {
+- (void)sendUploadDatasRequestWithUrl:(NSString *)url
+                           parameters:(NSDictionary *)parameters
+                         uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
+                     progressCallback:(ProgressCallback)progressCallback
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback {
     //配置需要根据项目的需要配置相应的token信息、ca证书等
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
@@ -239,27 +217,25 @@ static id _instance = nil;
 }
 
 /**
- 上传多张图片
+ 上传文件
  
  @param url 请求地址
- @param paramters 请求参数
- @param photoImages 图片
- @param name 服务器接收的字段名
- @param fileName 文件对应服务器名称
+ @param parameters 请求参数
+ @param uploadParam 上传文件参数
+ @param progressCallback 上传进度回调
  @param beforeSendCallback 开始上传回调
- @param successCallback 完成上传回调
+ @param successCallback 上传成功回调
  @param errorCallback 上传失败回调
  @param completeCallback 上传完成回调
  */
-- (void)sendUploadImageRequestWithUrl:(NSString *)url
-                           parameters:(NSDictionary *)paramters
-                          photoImages:(NSArray *)photoImages
-                                 name:(NSString *)name
-                             fileName:(NSString *)fileName
-                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
-                      successCallback:(SuccessCallback)successCallback
-                        errorCallback:(ErrorCallback)errorCallback
-                     completeCallback:(CompleteCallback)completeCallback {
+- (void)sendUploadDataRequestWithUrl:(NSString *)url
+                          parameters:(NSDictionary *)parameters
+                         uploadParam:(WJBaseUploadParam *)uploadParam
+                    progressCallback:(ProgressCallback)progressCallback
+                  beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                     successCallback:(SuccessCallback)successCallback
+                       errorCallback:(ErrorCallback)errorCallback
+                    completeCallback:(CompleteCallback)completeCallback {
     //配置需要根据项目的需要配置相应的token信息、ca证书等
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
@@ -271,29 +247,81 @@ static id _instance = nil;
         beforeSendCallback();
     }
     
-    if (!photoImages.count) {
-        NSLog(@"没有可上传的图片，请确认是否有图片资源");
-        
-        if (errorCallback) {
-            errorCallback(nil);
+    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:uploadParam.data name:uploadParam.name fileName:uploadParam.fileName mimeType:uploadParam.mimeTypeName];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progressCallback) {
+            progressCallback(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successCallback) {
+            successCallback(responseObject);
         }
         
         if (completeCallback) {
-            completeCallback(nil, nil);
+            completeCallback(nil, responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (errorCallback) {
+            errorCallback(error);
         }
         
-        return;
+        if (completeCallback) {
+            completeCallback(error, nil);
+        }
+    }];
+}
+
+/**
+ 批量上传图片
+ 
+ @param url 请求地址
+ @param name 服务器对应的字段的名称
+ @param fileName 图片的服务器名称
+ @param paramters 请求参数
+ @param photoImages 上传的图片
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 完成上传回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadImagesRequestWithUrl:(NSString *)url
+                                  name:(NSString *)name
+                              fileName:(NSString *)fileName
+                            parameters:(NSDictionary *)paramters
+                           photoImages:(NSArray *)photoImages
+                    beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                       successCallback:(SuccessCallback)successCallback
+                         errorCallback:(ErrorCallback)errorCallback
+                      completeCallback:(CompleteCallback)completeCallback {
+    //配置需要根据项目的需要配置相应的token信息、ca证书等
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
+    [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
+    
+    //这个回调的可以添加loading等相关提示
+    if (beforeSendCallback) {
+        beforeSendCallback();
     }
     
     [manager POST:url parameters:paramters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         for (int i = 0; i < photoImages.count; i++) {
             UIImage *image = [photoImages objectAtIndex:i];
+            //图片的命名规则为（fileName+ i）
+            NSString *imageName = [NSString stringWithFormat:@"%@%d.png", fileName, i];
             //此处图片应该需要做压缩(这个跟服务器的约定有关，可能需要改)
-            NSData *imageData = UIImagePNGRepresentation(image);
-            //获取图片类型
-            NSString *imageType = [NSData contentTypeForImageData:imageData];
-            NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
-            [formData appendPartWithFileData:imageData name:name fileName:[NSString stringWithFormat:@"%@%d.%@", fileName,i + 1, imageType] mimeType:mimeType];
+            NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+            //获取图片压缩率
+            double scaleNum = (double)300*1024/imageData.length;
+            //压缩图片
+            if (scaleNum < 1) {
+                imageData = UIImageJPEGRepresentation(image, scaleNum);
+            } else {
+                imageData = UIImageJPEGRepresentation(image, 0.1);
+            }
+            
+            [formData appendPartWithFileData:imageData name:name fileName:imageName mimeType:@"image/jpg/png/jpeg"];
         }
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -313,6 +341,97 @@ static id _instance = nil;
         if (completeCallback) {
             completeCallback(error, nil);
         }
+    }];
+}
+
+/**
+ 上传图片
+ 
+ @param url 请求地址
+ @param name 服务器对应的字段名称
+ @param fileName 图片的服务器名称
+ @param image 图片
+ @param paramters 请求参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 完成上传回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadImageRequestWithUrl:(NSString *)url
+                                 name:(NSString *)name
+                             fileName:(NSString *)fileName
+                                image:(UIImage *)image
+                           parameters:(NSDictionary *)paramters
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback {
+    //配置需要根据项目的需要配置相应的token信息、ca证书等
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
+    [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
+    
+    //这个回调的可以添加loading等相关提示
+    if (beforeSendCallback) {
+        beforeSendCallback();
+    }
+    
+    [manager POST:url parameters:paramters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        //此处图片应该需要做压缩(这个跟服务器的约定有关，可能需要改)
+        NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+        //获取图片压缩率
+        double scaleNum = (double)300*1024/imageData.length;
+        //压缩图片
+        if (scaleNum < 1) {
+            imageData = UIImageJPEGRepresentation(image, scaleNum);
+        } else {
+            imageData = UIImageJPEGRepresentation(image, 0.1);
+        }
+        
+        [formData appendPartWithFileData:imageData name:name fileName:fileName mimeType:@"image/jpg/png/jpeg"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successCallback) {
+            successCallback(responseObject);
+        }
+        
+        if (completeCallback) {
+            completeCallback(nil, responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (errorCallback) {
+            errorCallback(error);
+        }
+        
+        if (completeCallback) {
+            completeCallback(error, nil);
+        }
+    }];
+    
+}
+
+- (void)sendDownloadRequestWithUrl:(NSString *)url
+                         paramters:(NSDictionary *)paramters
+                beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                  progressCallback:(ProgressCallback)progressCallback
+                   successCallback:(SuccessCallback)successCallback
+                     errorCallback:(ErrorCallback)erroCallback
+                  completeCallback:(CompleteCallback)completeCallback {
+    //配置需要根据项目的需要配置相应的token信息、ca证书等
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
+    [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        return targetPath;
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        
     }];
 }
 
