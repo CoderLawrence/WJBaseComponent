@@ -78,6 +78,8 @@
 		47EC7BD047C906B92B85399E097E258E /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 658FB264F0F2118D6ACDF349655C834C /* UIApplication+StrictKeyWindow.m */; };
 		47F04CBDF6C54B220F6AEECEF15264D5 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4CD039039887A94C7134ABA8FC5549 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4861F2FFD5A4306E7B7BD3CD0D8199AC /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F089F85831A79A5460FA7BD8774106 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49664E681F5504DC008C84FE /* WJURLSessionDownloadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 49664E661F5504DC008C84FE /* WJURLSessionDownloadManager.h */; };
+		49664E691F5504DC008C84FE /* WJURLSessionDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49664E671F5504DC008C84FE /* WJURLSessionDownloadManager.m */; };
 		49C8413078876BA8148DC9EACE6F5EBB /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5208F2BD4A5E92B5815F131A8CEF910D /* SVIndefiniteAnimatedView.m */; };
 		4A4B5CAAFEA51006540DC2FCCEA40F29 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A88E3FB0B004774841E83A9C08F3CC85 /* NSObject+YYModel.m */; };
 		4A571204986D316637D43D3F93DCAC77 /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7C567853BA7B30211C018DA4950797 /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -438,7 +440,7 @@
 		1975580DE9224DCA72D69D100D0A91F5 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		1A335D492E08B0A26FB41A2E85BD586A /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		1CD2D4BE421E6DF4FFA9738874E21530 /* NSObject+ReplaceNullProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+ReplaceNullProperty.h"; path = "WJBaseComponent/Classes/Category/NSObject+ReplaceNullProperty.h"; sourceTree = "<group>"; };
-		1F2D6D46DF5CD3A6DFBC7BD624A0A46B /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYModel.framework; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2D6D46DF5CD3A6DFBC7BD624A0A46B /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6E1B9BA15CD550889BC8E7B6203BF3 /* Expecta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-prefix.pch"; sourceTree = "<group>"; };
 		1F7570892ED27F862E2966E55911A867 /* EXPMatchers+match.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+match.m"; path = "Expecta/Matchers/EXPMatchers+match.m"; sourceTree = "<group>"; };
 		20EBE33D8953ED52AE4AD412B9A6D7E4 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = YYModel/YYClassInfo.m; sourceTree = "<group>"; };
@@ -451,7 +453,7 @@
 		263A3B593268C6EA6AA8662C7E5F85C0 /* ExpectaObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaObject.m; path = Expecta/ExpectaObject.m; sourceTree = "<group>"; };
 		267100202531F328DD4E8AFE356EE1AB /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
 		2717BBAF932B8CB497E767C3251819C4 /* checkUserType_backward_9x15_@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "checkUserType_backward_9x15_@3x.png"; path = "WJBaseComponent/Assets/checkUserType_backward_9x15_@3x.png"; sourceTree = "<group>"; };
-		2787C8B0FC2ABD29F6DC335A8D9FD292 /* FDFullscreenPopGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FDFullscreenPopGesture.framework; path = FDFullscreenPopGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2787C8B0FC2ABD29F6DC335A8D9FD292 /* FDFullscreenPopGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDFullscreenPopGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BA5EDB0EF3A2F4DECB1D2AFFE7D082 /* NSObject+Dictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Dictionary.h"; path = "WJBaseComponent/Classes/Category/NSObject+Dictionary.h"; sourceTree = "<group>"; };
 		29570435807A6E786F9753A0C7E2853E /* EXPMatchers+postNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+postNotification.h"; path = "Expecta/Matchers/EXPMatchers+postNotification.h"; sourceTree = "<group>"; };
 		2A35D30AB51712A6A20130DD77A5B601 /* Expecta+Snapshots-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta+Snapshots-prefix.pch"; sourceTree = "<group>"; };
@@ -464,7 +466,7 @@
 		3115C26820134A5D5E501F7DC1574721 /* EXPMatchers+FBSnapshotTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+FBSnapshotTest.m"; sourceTree = "<group>"; };
 		317989C69939CD84E8D70C800BA5D70C /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
 		3249EA4EA62D2EAA8AFAD26652582A4E /* Pods-WJBaseComponent_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WJBaseComponent_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		33A2B63A5914525E3B6A26AE493EA339 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A2B63A5914525E3B6A26AE493EA339 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D87EF1E37AC63FF16EE6A251D26219 /* WJTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WJTabBarController.h; path = WJBaseComponent/Classes/Base/ViewController/WJTabBarController.h; sourceTree = "<group>"; };
 		3727FBAD1951BEFC79FF78F691069F9E /* SPTGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTGlobalBeforeAfterEach.h; path = Specta/Specta/SPTGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
 		38FE2CF76A04E34F34704CF9005732B0 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -473,7 +475,7 @@
 		3B694DF702AC59A308A0F10A0AD37892 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		3B806A26E54B8FBF0CF1A92D917B2E59 /* Pods-WJBaseComponent_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WJBaseComponent_Example-resources.sh"; sourceTree = "<group>"; };
 		3CB5E34B58B6C353B3289EA56261EFD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4002095775C16B55C64CB0C607E748D6 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		4002095775C16B55C64CB0C607E748D6 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworking.modulemap; sourceTree = "<group>"; };
 		4024C4C68E58E9E91803FDDB9DF8B80E /* FDFullscreenPopGesture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-umbrella.h"; sourceTree = "<group>"; };
 		41283BF3569C7FC84E1D237D03D0FEBF /* ExpectaObject+FBSnapshotTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpectaObject+FBSnapshotTest.m"; sourceTree = "<group>"; };
 		4191FE194F426BE81F3C559F92E1A3C3 /* NSDate+Extensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extensions.h"; path = "WJBaseComponent/Classes/Category/NSDate+Extensions.h"; sourceTree = "<group>"; };
@@ -490,6 +492,8 @@
 		486D78D48ECA31009F44990FD37D537C /* NSData+Extensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+Extensions.h"; path = "WJBaseComponent/Classes/Category/NSData+Extensions.h"; sourceTree = "<group>"; };
 		48FCDEA9377BCEAD7AF4E4269A4FB036 /* EXPDoubleTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDoubleTuple.h; path = Expecta/EXPDoubleTuple.h; sourceTree = "<group>"; };
 		4921E24F83B5AB81C309FB11360AC1C6 /* SpectaDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaDSL.m; path = Specta/Specta/SpectaDSL.m; sourceTree = "<group>"; };
+		49664E661F5504DC008C84FE /* WJURLSessionDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJURLSessionDownloadManager.h; path = WJBaseComponent/Classes/Tools/Network/Core/WJURLSessionDownloadManager.h; sourceTree = "<group>"; };
+		49664E671F5504DC008C84FE /* WJURLSessionDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJURLSessionDownloadManager.m; path = WJBaseComponent/Classes/Tools/Network/Core/WJURLSessionDownloadManager.m; sourceTree = "<group>"; };
 		4A2978859B53BBF715CFD77077781FCD /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		4A496AB98C9E8AA9D8F47E925ADBED34 /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = YYModel/YYModel.h; sourceTree = "<group>"; };
 		4C6C6C9A4DC0D0B1490AB0DC4BAC6125 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
@@ -497,14 +501,14 @@
 		4E693C661C220290DA04B71B3ABEEA9D /* WJNavigationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WJNavigationViewController.m; path = WJBaseComponent/Classes/Base/ViewController/WJNavigationViewController.m; sourceTree = "<group>"; };
 		4F537A93C3D362568DEC030CFC0AACA2 /* WJNetworkConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WJNetworkConnection.h; path = WJBaseComponent/Classes/Tools/Network/Core/WJNetworkConnection.h; sourceTree = "<group>"; };
 		4FBD51A631D0E74E47613ACE519F96C6 /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
-		50264E7D2360B655A63ED1CFB06439F8 /* WJBaseComponent.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WJBaseComponent.bundle; path = WJBaseComponent.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		50264E7D2360B655A63ED1CFB06439F8 /* WJBaseComponent.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJBaseComponent.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F3BAAE9CEE8E82AEB2E98D17F1BD81 /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beFalsy.h"; path = "Expecta/Matchers/EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
 		511CA4951C1473481F9CD35951FDB71B /* Specta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-prefix.pch"; sourceTree = "<group>"; };
 		513D7621D23CAD79B2414FB9C4AEA8B7 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
 		5158B030CB9FCAF34AF89CEE33623BF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5208F2BD4A5E92B5815F131A8CEF910D /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		5248C68BAC3B5EBC6F025838F01F78D6 /* EXPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = Expecta/EXPDefines.h; sourceTree = "<group>"; };
-		53161DB8F24DAF9AC06F1C2F59B6E8E5 /* WJBaseComponent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WJBaseComponent.modulemap; sourceTree = "<group>"; };
+		53161DB8F24DAF9AC06F1C2F59B6E8E5 /* WJBaseComponent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WJBaseComponent.modulemap; sourceTree = "<group>"; };
 		5357B0CA8F55650EBE70E3CE9DB596AD /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		544D2E076444444E30FCFD51D16C76A6 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
 		557B854D602F27617C024C733CAA8569 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
@@ -518,7 +522,7 @@
 		5AB045F6EAF99EDE06953A6738A73E6B /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
 		5AEF8FC58540737585F6594D1A876D8F /* SPTExcludeGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExcludeGlobalBeforeAfterEach.h; path = Specta/Specta/SPTExcludeGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
 		5BE4D0CA1154692152B143820BA5A87B /* Expecta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expecta.xcconfig; sourceTree = "<group>"; };
-		5E2869385A790260D81C74C9925BBEF2 /* Pods-WJBaseComponent_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WJBaseComponent_Tests.modulemap"; sourceTree = "<group>"; };
+		5E2869385A790260D81C74C9925BBEF2 /* Pods-WJBaseComponent_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WJBaseComponent_Tests.modulemap"; sourceTree = "<group>"; };
 		5E7C567853BA7B30211C018DA4950797 /* SpectaUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = Specta/Specta/SpectaUtility.h; sourceTree = "<group>"; };
 		609B84B478E6B4B68AB95329E1A73003 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6124D5EB254BC1890E34EE6C0D025A2D /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
@@ -531,7 +535,7 @@
 		67F089F85831A79A5460FA7BD8774106 /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beCloseTo.h"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
 		69DDBE7A0E3E99110B4764650721FB00 /* NSJSONSerialization+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSJSONSerialization+JSON.m"; path = "WJBaseComponent/Classes/Category/NSJSONSerialization+JSON.m"; sourceTree = "<group>"; };
 		6A6068A37A04B9C5D8B38118D93CFDB2 /* UIView+Frame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "WJBaseComponent/Classes/Category/UIView+Frame.m"; sourceTree = "<group>"; };
-		6A9D2D4F1BB07207F0E06EE80D82EA43 /* Expecta+Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Expecta+Snapshots.modulemap"; sourceTree = "<group>"; };
+		6A9D2D4F1BB07207F0E06EE80D82EA43 /* Expecta+Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Expecta+Snapshots.modulemap"; sourceTree = "<group>"; };
 		6AB2AD4EA4D10FB994361C25BB9FD15C /* WJTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WJTabBarController.m; path = WJBaseComponent/Classes/Base/ViewController/WJTabBarController.m; sourceTree = "<group>"; };
 		6C3A0836C4BAE738684E60CAC4524BF6 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "Specta/Specta/XCTestCase+Specta.h"; sourceTree = "<group>"; };
 		6C4CD039039887A94C7134ABA8FC5549 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
@@ -559,14 +563,14 @@
 		7DA2A24635CA9BD34EF280222E73F6DA /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		7F14451EDD8FB710E99FC601A4610570 /* WJNetworkKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WJNetworkKit.h; path = WJBaseComponent/Classes/Tools/Network/WJNetworkKit.h; sourceTree = "<group>"; };
 		82EB3E260B29224D61B4F9A5AC94B510 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		835920AE694E2DD637D8AF2FC86863D5 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		835920AE694E2DD637D8AF2FC86863D5 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A7B334F1023E204B191D93DADC69C3 /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+respondTo.h"; path = "Expecta/Matchers/EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
 		86D5D5D05C038B2DB607FCB81B12527C /* NSValue+Expecta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValue+Expecta.m"; path = "Expecta/NSValue+Expecta.m"; sourceTree = "<group>"; };
 		88695060FB0F148C9A775BF28E524709 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
 		88BC6B3B3BABF8F8B4F57A9A20F35C19 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		8914F9C970DEE6D3C3E16D17D1855D7D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		892B27AC0B5991B0CF9DB4C2A8823713 /* EXPMatchers+beSupersetOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSupersetOf.m"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.m"; sourceTree = "<group>"; };
-		8969F51D710B77925399A9FBEC0D60AA /* WJBaseComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WJBaseComponent.framework; path = WJBaseComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8969F51D710B77925399A9FBEC0D60AA /* WJBaseComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WJBaseComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8970EF4DB65B882E98B385714FEFDE03 /* EXPMatchers+beInTheRangeOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInTheRangeOf.m"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.m"; sourceTree = "<group>"; };
 		8A7213A3A78196D107246FEB9958FF0D /* WJBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WJBaseViewController.m; path = WJBaseComponent/Classes/Base/ViewController/WJBaseViewController.m; sourceTree = "<group>"; };
 		8B2733075945B4DF967E631854FFC7FA /* EXPMatchers+contain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+contain.m"; path = "Expecta/Matchers/EXPMatchers+contain.m"; sourceTree = "<group>"; };
@@ -583,12 +587,12 @@
 		907AFB9D768801D62FA9770F621F6E4D /* EXPMatchers+beNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beNil.m"; path = "Expecta/Matchers/EXPMatchers+beNil.m"; sourceTree = "<group>"; };
 		91B6FFFEDC09DAC298CF47C39607DEEF /* NSObject+Guard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Guard.m"; path = "WJBaseComponent/Classes/Category/NSObject+Guard.m"; sourceTree = "<group>"; };
 		923579A3C165BDF3E9A54D594D6FD664 /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPUnsupportedObject.h; path = Expecta/EXPUnsupportedObject.h; sourceTree = "<group>"; };
-		92374CBEF94A511FEB3D833ABBCD54B4 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		927D68E18CDD52129FB9A9F933AFFD42 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Expecta.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92374CBEF94A511FEB3D833ABBCD54B4 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
+		927D68E18CDD52129FB9A9F933AFFD42 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93514965824BCA657C95C7625843993F /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInTheRangeOf.h"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
 		938AB6BD8AE5479022A4531FFE210A2A /* Pods-WJBaseComponent_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WJBaseComponent_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94B22BF4B335B4FC892EA6E3CDD68A81 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94B22BF4B335B4FC892EA6E3CDD68A81 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		97A1706DACF1837DF8FDC819A72017F3 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		9B14048B2483BFD4A92F748E0B259F05 /* SPTExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExample.m; path = Specta/Specta/SPTExample.m; sourceTree = "<group>"; };
 		9B865B3496F827075281F1AE60DCC9A3 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -596,7 +600,7 @@
 		9E1E8C1D91A0FEA72D49E8695CD3714D /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		9E34923819E884351D54F2C3028F4A38 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		9EB51376A5AEB547AE20FB26B0173CAB /* Pods-WJBaseComponent_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WJBaseComponent_Example-umbrella.h"; sourceTree = "<group>"; };
-		A19AEF39140A24E6BA58F0F51E0337D5 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19AEF39140A24E6BA58F0F51E0337D5 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A391F8EEECCF10EFE519708C841B84CF /* WJBaseComponent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WJBaseComponent-umbrella.h"; sourceTree = "<group>"; };
 		A39D2E151845B4489828B9594A624A96 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		A3EE4701DC7CE7797D8BEA73AACE0B34 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
@@ -645,7 +649,7 @@
 		C6088E8DD045AE2BE58A69DDFE7B7284 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C71019A864C04FA1D54BC63A3028C02A /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		C81193E5C84FD96C28422CE9F98E5314 /* EXPMatchers+beLessThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.m"; sourceTree = "<group>"; };
-		C8E6DA0829D4D019BFD5A1D11364F860 /* Expecta_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Expecta_Snapshots.framework; path = "Expecta+Snapshots.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E6DA0829D4D019BFD5A1D11364F860 /* Expecta_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99F726A1BE3C55C4EA51BE52D56E26A /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		CACDDAF22A68C3D54DBA6CEE2AAEAF54 /* SPTCompiledExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCompiledExample.m; path = Specta/Specta/SPTCompiledExample.m; sourceTree = "<group>"; };
 		CBC7AB28987E76049CF713EFAAC664CF /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
@@ -657,7 +661,7 @@
 		D34ED73D2368F6A5B60DE5635639DA5A /* EXPMatchers+equal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+equal.h"; path = "Expecta/Matchers/EXPMatchers+equal.h"; sourceTree = "<group>"; };
 		D5AD4DACB4A801C7160B0EA2D164737E /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		D6CF94F2FB40D2D142C0A738CE4D4086 /* FDFullscreenPopGesture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.xcconfig; sourceTree = "<group>"; };
-		D7A279980AA6D81B0F6CABDC0A7314CA /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Specta.framework; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A279980AA6D81B0F6CABDC0A7314CA /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87AF1535FB7BA58F89DA76D7088AE34 /* Pods-WJBaseComponent_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WJBaseComponent_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D94B83A4CEF735A2FC90246FF4CE4FA1 /* EXPMatchers+beCloseTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beCloseTo.m"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.m"; sourceTree = "<group>"; };
 		D9D2E1269ECB84D49346EFC27883BBE1 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
@@ -674,7 +678,7 @@
 		E0B2F6E0E8E8AD3D778B653D91779F07 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		E1531DEF6F605C2070605011DB910F00 /* WJNetworkConnection+Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WJNetworkConnection+Model.m"; path = "WJBaseComponent/Classes/Tools/Network/Core/WJNetworkConnection+Model.m"; sourceTree = "<group>"; };
 		E1703AA470D0331683110877B12B6566 /* SPTCallSite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCallSite.h; path = Specta/Specta/SPTCallSite.h; sourceTree = "<group>"; };
-		E1EDB389B2F308B170097384DC7C524E /* Pods-WJBaseComponent_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WJBaseComponent_Example.modulemap"; sourceTree = "<group>"; };
+		E1EDB389B2F308B170097384DC7C524E /* Pods-WJBaseComponent_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WJBaseComponent_Example.modulemap"; sourceTree = "<group>"; };
 		E29CC757A10D21B109C37D419FC1D175 /* WJNetworkConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WJNetworkConnection.m; path = WJBaseComponent/Classes/Tools/Network/Core/WJNetworkConnection.m; sourceTree = "<group>"; };
 		E31BC783400AAE5EAAE29B2AD9BC7A11 /* NSJSONSerialization+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSJSONSerialization+JSON.h"; path = "WJBaseComponent/Classes/Category/NSJSONSerialization+JSON.h"; sourceTree = "<group>"; };
 		E3FECE920D8100986550ED3A7FE4E2C9 /* EXPMatchers+match.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+match.h"; path = "Expecta/Matchers/EXPMatchers+match.h"; sourceTree = "<group>"; };
@@ -685,28 +689,28 @@
 		E676EC326215C0181B4A29E0450D0B6F /* ResourceBundle-WJBaseComponent-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-WJBaseComponent-Info.plist"; sourceTree = "<group>"; };
 		E76375C9A0A21060D46B0A354FBDB856 /* EXPMatchers+conformTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+conformTo.m"; path = "Expecta/Matchers/EXPMatchers+conformTo.m"; sourceTree = "<group>"; };
 		E7771120D608BDB5CABAC0D24F71D5AC /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beIdenticalTo.h"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
-		E84F8D38335E937922664DE2CD54A5CA /* YYModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = YYModel.modulemap; sourceTree = "<group>"; };
+		E84F8D38335E937922664DE2CD54A5CA /* YYModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YYModel.modulemap; sourceTree = "<group>"; };
 		E8C115CB9E41C22048DDBFA16C1A1259 /* NSValue+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+Expecta.h"; path = "Expecta/NSValue+Expecta.h"; sourceTree = "<group>"; };
-		EB051FFD1DB3429DA7C349EAE7D95421 /* Specta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Specta.modulemap; sourceTree = "<group>"; };
+		EB051FFD1DB3429DA7C349EAE7D95421 /* Specta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Specta.modulemap; sourceTree = "<group>"; };
 		EB9B5FFA163A547355CABD372460D026 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		EC29AA0304234902F88C40AFE0BB5358 /* Pods-WJBaseComponent_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WJBaseComponent_Tests-umbrella.h"; sourceTree = "<group>"; };
 		ED77126E6F4AE892D21EDF121DEC9D64 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		ED930C85F311B7E1564FA5B8770F280A /* SPTSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSpec.m; path = Specta/Specta/SPTSpec.m; sourceTree = "<group>"; };
 		EF397DCE828EAF56842FB0E283834CAA /* EXPMatchers+raise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raise.m"; path = "Expecta/Matchers/EXPMatchers+raise.m"; sourceTree = "<group>"; };
 		EF3B2EBB57812362725D8544620D1C83 /* EXPMatchers+beginWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beginWith.m"; path = "Expecta/Matchers/EXPMatchers+beginWith.m"; sourceTree = "<group>"; };
-		F0654FE441AF0A3C9291B6DF57C97298 /* FDFullscreenPopGesture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FDFullscreenPopGesture.modulemap; sourceTree = "<group>"; };
+		F0654FE441AF0A3C9291B6DF57C97298 /* FDFullscreenPopGesture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FDFullscreenPopGesture.modulemap; sourceTree = "<group>"; };
 		F071CCB0CC8F6C3196F06A776AF7D2A3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		F23A19C1A33408A365F853E41675093D /* Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Expecta.h; path = Expecta/Expecta.h; sourceTree = "<group>"; };
 		F2AAFD850886145CACC7A484EBD680BA /* XCTestCase+Specta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Specta.m"; path = "Specta/Specta/XCTestCase+Specta.m"; sourceTree = "<group>"; };
 		F341E8BF2EBEDA4BEC9733781F813355 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F44F0A3909686EE738008F07D42C6539 /* Pods_WJBaseComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WJBaseComponent_Tests.framework; path = "Pods-WJBaseComponent_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44F0A3909686EE738008F07D42C6539 /* Pods_WJBaseComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WJBaseComponent_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CB7B0F6CAAFD5421B870A36D83A1AD /* ExpectaSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaSupport.m; path = Expecta/ExpectaSupport.m; sourceTree = "<group>"; };
 		F5FB2AB7DC5CDCA838DA770CFBA8CAAA /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
 		F65003C72FE6089DCB7D06C8B5DE11FA /* UIView+Frame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "WJBaseComponent/Classes/Category/UIView+Frame.h"; sourceTree = "<group>"; };
 		F71CEBC7D5638995C4062D75EC5F7823 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		F8F5922FEF0BBA530EF302D324A34735 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		F910D00B3B7AD73A6BECED62F86A24FC /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		F9180230C92BDC48850C0196E98AD840 /* Expecta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Expecta.modulemap; sourceTree = "<group>"; };
+		F9180230C92BDC48850C0196E98AD840 /* Expecta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Expecta.modulemap; sourceTree = "<group>"; };
 		F9836DA6C4601EBF61EFA5E6A65618C1 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		FB6FB773133376F9CD2E88A75EAC5752 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		FC3DA63B92B2BC067DDF6B2AAC2A77FE /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -714,7 +718,7 @@
 		FD262075A155F91EDDCB9B10A40BBC9C /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		FD551B50E168D63EAAD2B4B49E6A6476 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		FEC335085E2B863091E48782E0CEF9DE /* WJNetworkConnection+Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WJNetworkConnection+Model.h"; path = "WJBaseComponent/Classes/Tools/Network/Core/WJNetworkConnection+Model.h"; sourceTree = "<group>"; };
-		FF0371739B61473C03790D048ED8DF72 /* Pods_WJBaseComponent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WJBaseComponent_Example.framework; path = "Pods-WJBaseComponent_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0371739B61473C03790D048ED8DF72 /* Pods_WJBaseComponent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WJBaseComponent_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF964F28BCBADC16A91BD8EAF36F0E76 /* Specta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Specta.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1015,7 +1019,6 @@
 				86D5D5D05C038B2DB607FCB81B12527C /* NSValue+Expecta.m */,
 				95FF1FF192DC109F07488183466DBD5A /* Support Files */,
 			);
-			name = Expecta;
 			path = Expecta;
 			sourceTree = "<group>";
 		};
@@ -1166,7 +1169,6 @@
 				F2AAFD850886145CACC7A484EBD680BA /* XCTestCase+Specta.m */,
 				0ACB8312E33DC62EB9F65FECB35CB807 /* Support Files */,
 			);
-			name = Specta;
 			path = Specta;
 			sourceTree = "<group>";
 		};
@@ -1212,7 +1214,6 @@
 				EFC2C893B2AF9AB3D71D7865222944D9 /* Resources */,
 				8853F497311F815E29D07F04EB27A067 /* Support Files */,
 			);
-			name = SVProgressHUD;
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1334,7 +1335,6 @@
 				3115C26820134A5D5E501F7DC1574721 /* EXPMatchers+FBSnapshotTest.m */,
 				F13B1D8D417068593E409950EA780C0B /* Support Files */,
 			);
-			name = "Expecta+Snapshots";
 			path = "Expecta+Snapshots";
 			sourceTree = "<group>";
 		};
@@ -1359,7 +1359,6 @@
 				04EF0651819A4B60343263CC430883F3 /* Support Files */,
 				2384CA772E1952DA6FA6931A9315C70D /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -1433,6 +1432,8 @@
 				E29CC757A10D21B109C37D419FC1D175 /* WJNetworkConnection.m */,
 				FEC335085E2B863091E48782E0CEF9DE /* WJNetworkConnection+Model.h */,
 				E1531DEF6F605C2070605011DB910F00 /* WJNetworkConnection+Model.m */,
+				49664E661F5504DC008C84FE /* WJURLSessionDownloadManager.h */,
+				49664E671F5504DC008C84FE /* WJURLSessionDownloadManager.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1444,7 +1445,6 @@
 				C99F726A1BE3C55C4EA51BE52D56E26A /* UINavigationController+FDFullscreenPopGesture.m */,
 				56B33C52409BBD5BC000BC2BF0867B9A /* Support Files */,
 			);
-			name = FDFullscreenPopGesture;
 			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
@@ -1458,7 +1458,6 @@
 				4A496AB98C9E8AA9D8F47E925ADBED34 /* YYModel.h */,
 				65A99F8AEF5CC14B7925358F6000BD7E /* Support Files */,
 			);
-			name = YYModel;
 			path = YYModel;
 			sourceTree = "<group>";
 		};
@@ -1528,7 +1527,6 @@
 				7C668D110A3FA2BAA81A61DE69D67B54 /* Support Files */,
 				D04AF53325D0C91361820CA48E0171E3 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -1726,6 +1724,7 @@
 				300A8ECFF6B7F63F8A91B28865AB037B /* WJBaseComponent-umbrella.h in Headers */,
 				09D87D444E0CD92BBE77D9F75B8A60D3 /* WJBaseComponent.h in Headers */,
 				CF3F7C74FC7EB42F68E9CC4F1B23A532 /* WJBaseRequest.h in Headers */,
+				49664E681F5504DC008C84FE /* WJURLSessionDownloadManager.h in Headers */,
 				8A50531F6902025F68E2C15FE6B01C4F /* WJBaseResponse.h in Headers */,
 				7B025229858AB3D87213E75D70BF0F61 /* WJBaseUploadParam.h in Headers */,
 				65A00C2747096EA71C9366C36342B47C /* WJBaseViewController.h in Headers */,
@@ -2212,6 +2211,7 @@
 				57C7BD013D3891075027523022A48267 /* WJBaseResponse.m in Sources */,
 				822B8466B184DB7D23E69A6917F66310 /* WJBaseUploadParam.m in Sources */,
 				4FA3D6C22663A8752CAEEB4F8455E729 /* WJBaseViewController.m in Sources */,
+				49664E691F5504DC008C84FE /* WJURLSessionDownloadManager.m in Sources */,
 				A06C63252F2CF2D084FF6937D9C02877 /* WJNavigationViewController.m in Sources */,
 				C72481A649ACB4BB5F5A52EB4433D47D /* WJNetworkConnection+Model.m in Sources */,
 				DBA9B03FDDEF6539ADBB59B86C07EAAA /* WJNetworkConnection.m in Sources */,

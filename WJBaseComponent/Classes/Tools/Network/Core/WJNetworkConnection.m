@@ -412,27 +412,4 @@ static id _instance = nil;
     
 }
 
-- (void)sendDownloadRequestWithUrl:(NSString *)url
-                         paramters:(NSDictionary *)paramters
-                beforeSendCallback:(BeforeSendCallback)beforeSendCallback
-                  progressCallback:(ProgressCallback)progressCallback
-                   successCallback:(SuccessCallback)successCallback
-                     errorCallback:(ErrorCallback)erroCallback
-                  completeCallback:(CompleteCallback)completeCallback {
-    //配置需要根据项目的需要配置相应的token信息、ca证书等
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
-    [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
-    
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-    [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return targetPath;
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        
-    }];
-}
-
 @end
