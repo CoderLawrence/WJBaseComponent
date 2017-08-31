@@ -83,6 +83,11 @@ static id _instance = nil;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", nil];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
     
+    //如果存在token，则设置token(此处是的字段名称是服务器约定好的 所以得根据服务的约定来设置)
+    if (parameters.count && [parameters objectForKey:@"accessToken"]) {
+        [manager.requestSerializer setValue:[parameters objectForKey:@"accessToken"]  forHTTPHeaderField:@"accessToken"];
+    }
+    
     //这个回调的可以添加loading等相关提示
     if (beforeSendCallback) {
         beforeSendCallback();
@@ -130,6 +135,11 @@ static id _instance = nil;
     [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
+    
+    //如果存在token，则设置token(此处是的字段名称是服务器约定好的 所以得根据服务的约定来设置)
+    if (parameters.count && [parameters objectForKey:@"accessToken"]) {
+        [manager.requestSerializer setValue:[parameters objectForKey:@"accessToken"]  forHTTPHeaderField:@"accessToken"];
+    }
     
     //这个回调的可以添加loading等相关提示
     if (beforeSendCallback) {
@@ -183,6 +193,11 @@ static id _instance = nil;
     [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
+    
+    //如果存在token，则设置token(此处是的字段名称是服务器约定好的 所以得根据服务的约定来设置)
+    if (parameters.count && [parameters objectForKey:@"accessToken"]) {
+        [manager.requestSerializer setValue:[parameters objectForKey:@"accessToken"]  forHTTPHeaderField:@"accessToken"];
+    }
     
     //这个回调的可以添加loading等相关提示
     if (beforeSendCallback) {
@@ -242,6 +257,11 @@ static id _instance = nil;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
     
+    //如果存在token，则设置token(此处是的字段名称是服务器约定好的 所以得根据服务的约定来设置)
+    if (parameters.count && [parameters objectForKey:@"accessToken"]) {
+        [manager.requestSerializer setValue:[parameters objectForKey:@"accessToken"]  forHTTPHeaderField:@"accessToken"];
+    }
+    
     //这个回调的可以添加loading等相关提示
     if (beforeSendCallback) {
         beforeSendCallback();
@@ -278,7 +298,7 @@ static id _instance = nil;
  @param url 请求地址
  @param name 服务器对应的字段的名称
  @param fileName 图片的服务器名称
- @param paramters 请求参数
+ @param parameters 请求参数
  @param photoImages 上传的图片
  @param beforeSendCallback 开始上传回调
  @param successCallback 完成上传回调
@@ -288,7 +308,7 @@ static id _instance = nil;
 - (void)sendUploadImagesRequestWithUrl:(NSString *)url
                                   name:(NSString *)name
                               fileName:(NSString *)fileName
-                            parameters:(NSDictionary *)paramters
+                            parameters:(NSDictionary *)parameters
                            photoImages:(NSArray *)photoImages
                     beforeSendCallback:(BeforeSendCallback)beforeSendCallback
                        successCallback:(SuccessCallback)successCallback
@@ -300,12 +320,17 @@ static id _instance = nil;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
     
+    //如果存在token，则设置token(此处是的字段名称是服务器约定好的 所以得根据服务的约定来设置)
+    if (parameters.count && [parameters objectForKey:@"accessToken"]) {
+        [manager.requestSerializer setValue:[parameters objectForKey:@"accessToken"]  forHTTPHeaderField:@"accessToken"];
+    }
+    
     //这个回调的可以添加loading等相关提示
     if (beforeSendCallback) {
         beforeSendCallback();
     }
     
-    [manager POST:url parameters:paramters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         for (int i = 0; i < photoImages.count; i++) {
             UIImage *image = [photoImages objectAtIndex:i];
             //图片的命名规则为（fileName+ i）
@@ -371,6 +396,11 @@ static id _instance = nil;
     [manager.requestSerializer setTimeoutInterval:DYLY_REQUEST_TIMEOUT];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json",@"text/html",@"application/json", @"text/plain", nil];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"client-info"];
+    
+    //如果存在token，则设置token(此处是的字段名称是服务器约定好的 所以得根据服务的约定来设置)
+    if (paramters.count && [paramters objectForKey:@"accessToken"]) {
+        [manager.requestSerializer setValue:[paramters objectForKey:@"accessToken"]  forHTTPHeaderField:@"accessToken"];
+    }
     
     //这个回调的可以添加loading等相关提示
     if (beforeSendCallback) {

@@ -108,4 +108,63 @@
                 }];
 }
 
+/**
+ 批量上传图片
+ 
+ @param url 请求地址
+ @param name 服务端对应的字段名称
+ @param fileName 服务端文件名称
+ @param photoImages 图片
+ @param requestModel 请求参数
+ @param responseModel 返回参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 上传完成回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadImagesRequestWithUrl:(NSString *)url
+                                  name:(NSString *)name
+                              fileName:(NSString *)fileName
+                           photoImages:(NSArray *)photoImages
+                          requestModel:(WJBaseRequest *)requestModel
+                         responseModel:(Class)responseModel
+                    beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                       successCallback:(SuccessCallback)successCallback
+                         errorCallback:(ErrorCallback)errorCallback
+                      completeCallback:(CompleteCallback)completeCallback {
+    if (requestModel.cachePolicy == WJRequestCachePolicyReloadIgnoringLocalCacheData) {
+        
+    } else if (requestModel.cachePolicy == WJRequestCachePolicyReturnCacheDataElseLoad) {
+        
+    }
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel yy_modelToJSONObject]];
+    [parameters removeObjectForKey:@"cachePolicy"];
+    [parameters removeObjectForKey:@"cacheTimeOutInterval"];
+    
+    [self sendUploadImagesRequestWithUrl:url
+                                    name:name
+                                fileName:fileName
+                              parameters:parameters.count > 0 ? parameters : nil
+                             photoImages:photoImages beforeSendCallback:^{
+                                 if (beforeSendCallback) {
+                                     beforeSendCallback();
+                                 }
+                             } successCallback:^(id result) {
+                                 if (successCallback) {
+                                     WJBaseResponse *response = [responseModel yy_modelWithJSON:result];
+                                     successCallback(response);
+                                 }
+                             } errorCallback:^(NSError *error) {
+                                 if (errorCallback) {
+                                     errorCallback(error);
+                                 }
+                             } completeCallback:^(NSError *error, id result) {
+                                 if (completeCallback) {
+                                     WJBaseResponse *response = [responseModel yy_modelWithJSON:result];
+                                     completeCallback(error, response);
+                                 }
+                             }];
+}
+
 @end

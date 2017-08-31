@@ -35,6 +35,7 @@
 #import "WJBaseUploadParam.h"
 #import "WJNetworkConnection+Model.h"
 #import "WJNetworkConnection.h"
+#import "WJURLSessionDownloadManager.h"
 #import "WJUserDefaults.h"
 
 FOUNDATION_EXPORT double WJBaseComponentVersionNumber;

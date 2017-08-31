@@ -22,6 +22,11 @@ typedef NS_ENUM(NSUInteger, WJRequestCachePolicy) {
 @interface WJBaseRequest : NSObject
 
 /**
+ 登录会话token
+ */
+@property (nonatomic, copy) NSString *accessToken;
+
+/**
  请求缓存策略
  */
 @property (nonatomic, assign) WJRequestCachePolicy cachePolicy;

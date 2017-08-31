@@ -25,12 +25,12 @@ typedef NS_ENUM(NSUInteger, WJRequestResult) {
     WJRequestResultFail,
 };
 
-typedef void (^Callback)(NSInteger error, id result);        //回调信息
-typedef void (^BeforeSendCallback)(void);                    //开始请求回调
+typedef void (^Callback)(NSInteger error, id result);          //回调信息
+typedef void (^BeforeSendCallback)(void);                     //开始请求回调
 typedef void (^SuccessCallback)(id result);                  //请求成功回调
-typedef void (^ErrorCallback)(NSError *error);               //请求失败回调
+typedef void (^ErrorCallback)(NSError *error);                //请求失败回调
 typedef void (^CompleteCallback)(NSError *error, id result);  //请求完成回调
-typedef void (^ProgressCallback)(NSProgress *progress);
+typedef void (^ProgressCallback)(NSProgress *progress);       //进度回调
 
 @interface WJNetworkConnection : NSObject
 
@@ -122,7 +122,7 @@ typedef void (^ProgressCallback)(NSProgress *progress);
  @param url 请求地址
  @param name 服务器对应的字段的名称
  @param fileName 图片的服务器名称
- @param paramters 请求参数
+ @param parameters 请求参数
  @param photoImages 上传的图片
  @param beforeSendCallback 开始上传回调
  @param successCallback 完成上传回调
@@ -132,7 +132,7 @@ typedef void (^ProgressCallback)(NSProgress *progress);
 - (void)sendUploadImagesRequestWithUrl:(NSString *)url
                                  name:(NSString *)name
                              fileName:(NSString *)fileName
-                           parameters:(NSDictionary *)paramters
+                           parameters:(NSDictionary *)parameters
                           photoImages:(NSArray *)photoImages
                    beforeSendCallback:(BeforeSendCallback)beforeSendCallback
                       successCallback:(SuccessCallback)successCallback
@@ -146,7 +146,7 @@ typedef void (^ProgressCallback)(NSProgress *progress);
  @param name 服务器对应的字段名称
  @param fileName 图片的服务器名称
  @param image 图片
- @param paramters 请求参数
+ @param parameters 请求参数
  @param beforeSendCallback 开始上传回调
  @param successCallback 完成上传回调
  @param errorCallback 上传失败回调
@@ -156,7 +156,7 @@ typedef void (^ProgressCallback)(NSProgress *progress);
                                  name:(NSString *)name
                              fileName:(NSString *)fileName
                                 image:(UIImage *)image
-                           parameters:(NSDictionary *)paramters
+                           parameters:(NSDictionary *)parameters
                    beforeSendCallback:(BeforeSendCallback)beforeSendCallback
                       successCallback:(SuccessCallback)successCallback
                         errorCallback:(ErrorCallback)errorCallback
