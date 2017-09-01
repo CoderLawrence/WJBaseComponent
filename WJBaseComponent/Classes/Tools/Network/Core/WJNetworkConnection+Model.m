@@ -177,7 +177,7 @@
  @param requestModel 请求参数
  @param responseModel 返回参数
  @param beforeSendCallback 开始上传回调
- @param successCallback 完成上传回调
+ @param successCallback 成功上传回调
  @param errorCallback 上传失败回调
  @param completeCallback 完成上传回调
  */
@@ -228,6 +228,113 @@
                      }];
 }
 
+/**
+ 批量上传文件
+ 
+ @param url 请求地址
+ @param requestModel 请求参数
+ @param responseModel 返回参数
+ @param uploadParams 上传参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 上传成功回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadDatasRequestWithUrl:(NSString *)url
+                         requestModel:(WJBaseRequest *)requestModel
+                        responseModel:(Class)responseModel
+                         uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback {
+    
+    //缓存网络请求
+    if (requestModel.cachePolicy == WJRequestCachePolicyReloadIgnoringLocalCacheData) {
+        
+    } else if (requestModel.cachePolicy == WJRequestCachePolicyReturnCacheDataElseLoad) {
+        
+    }
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel yy_modelToJSONObject]];
+    [parameters removeObjectForKey:@"cachePolicy"];
+    [parameters removeObjectForKey:@"cacheTimeOutInterval"];
+    
+    [self sendUploadDatasRequestWithUrl:url parameters:parameters.count > 0 ? parameters : nil uploadParams:uploadParams progressCallback:^(NSProgress *progress) {
+        
+    } beforeSendCallback:^{
+        if (beforeSendCallback) {
+            beforeSendCallback();
+        }
+    } successCallback:^(id result) {
+        if (successCallback) {
+            WJBaseResponse *response = [WJBaseResponse yy_modelWithJSON:result];
+            successCallback(response);
+        }
+    } errorCallback:^(NSError *error) {
+        if (errorCallback) {
+            errorCallback(error);
+        }
+    } completeCallback:^(NSError *error, id result) {
+        if (completeCallback) {
+            WJBaseResponse *response = [WJBaseResponse yy_modelWithJSON:result];
+            completeCallback(nil, response);
+        }
+    }];
+}
 
+/**
+ 上传文件
+ 
+ @param url 请求地址
+ @param requestModel 请求参数
+ @param responseModel 返回参数
+ @param uploadParam 上传参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 上传成功回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadDataRequestWithUrl:(NSString *)url
+                        requestModel:(WJBaseRequest *)requestModel
+                       responseModel:(Class)responseModel
+                         uploadParam:(WJBaseUploadParam *)uploadParam
+                  beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                     successCallback:(SuccessCallback)successCallback
+                       errorCallback:(ErrorCallback)errorCallback
+                    completeCallback:(CompleteCallback)completeCallback {
+    //缓存网络请求
+    if (requestModel.cachePolicy == WJRequestCachePolicyReloadIgnoringLocalCacheData) {
+        
+    } else if (requestModel.cachePolicy == WJRequestCachePolicyReturnCacheDataElseLoad) {
+        
+    }
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: [requestModel yy_modelToJSONObject]];
+    [parameters removeObjectForKey:@"cachePolicy"];
+    [parameters removeObjectForKey:@"cacheTimeOutInterval"];
+    
+    [self sendUploadDataRequestWithUrl:url parameters:parameters.count > 0 ? parameters : nil uploadParam:uploadParam progressCallback:^(NSProgress *progress) {
+        
+    } beforeSendCallback:^{
+        if (beforeSendCallback) {
+            beforeSendCallback();
+        }
+    } successCallback:^(id result) {
+        if (successCallback) {
+            WJBaseResponse *response = [WJBaseResponse yy_modelWithJSON:result];
+            successCallback(response);
+        }
+    } errorCallback:^(NSError *error) {
+        if (errorCallback) {
+            errorCallback(error);
+        }
+    } completeCallback:^(NSError *error, id result) {
+        if (completeCallback) {
+            WJBaseResponse *response = [WJBaseResponse yy_modelWithJSON:result];
+            completeCallback(nil, response);
+        }
+    }];
+}
 
 @end

@@ -100,4 +100,46 @@
                         errorCallback:(ErrorCallback)errorCallback
                      completeCallback:(CompleteCallback)completeCallback;
 
+/**
+ 批量上传文件
+ 
+ @param url 请求地址
+ @param requestModel 请求参数
+ @param responseModel 返回参数
+ @param uploadParams 上传参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 上传完成回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadDatasRequestWithUrl:(NSString *)url
+                         requestModel:(WJBaseRequest *)requestModel
+                        responseModel:(Class)responseModel
+                         uploadParams:(NSArray<WJBaseUploadParam *> *)uploadParams
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback;
+
+/**
+ 上传文件
+ 
+ @param url 请求地址
+ @param requestModel 请求参数
+ @param responseModel 返回参数
+ @param uploadParam 上传参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 上传成功回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 上传完成回调
+ */
+- (void)sendUploadDataRequestWithUrl:(NSString *)url
+                        requestModel:(WJBaseRequest *)requestModel
+                       responseModel:(Class)responseModel
+                         uploadParam:(WJBaseUploadParam *)uploadParam
+                  beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                     successCallback:(SuccessCallback)successCallback
+                       errorCallback:(ErrorCallback)errorCallback
+                    completeCallback:(CompleteCallback)completeCallback;
+
 @end
