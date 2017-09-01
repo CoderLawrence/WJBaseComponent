@@ -75,4 +75,29 @@
                          errorCallback:(ErrorCallback)errorCallback
                       completeCallback:(CompleteCallback)completeCallback;
 
+/**
+ 上传图片
+ 
+ @param url 请求地址
+ @param name 服务器对应字段名称
+ @param fileName 文件服务器名称
+ @param image 要上传的图片
+ @param requestModel 请求参数
+ @param responseModel 返回参数
+ @param beforeSendCallback 开始上传回调
+ @param successCallback 完成上传回调
+ @param errorCallback 上传失败回调
+ @param completeCallback 完成上传回调
+ */
+- (void)sendUploadImageRequestWithUrl:(NSString *)url
+                                 name:(NSString *)name
+                             fileName:(NSString *)fileName
+                                image:(UIImage *)image
+                         requestModel:(WJBaseRequest *)requestModel
+                        responseModel:(Class)responseModel
+                   beforeSendCallback:(BeforeSendCallback)beforeSendCallback
+                      successCallback:(SuccessCallback)successCallback
+                        errorCallback:(ErrorCallback)errorCallback
+                     completeCallback:(CompleteCallback)completeCallback;
+
 @end
