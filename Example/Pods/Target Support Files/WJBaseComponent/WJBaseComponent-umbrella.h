@@ -18,6 +18,7 @@
 #import "NSDate+Extensions.h"
 #import "NSJSONSerialization+JSON.h"
 #import "NSObject+Dictionary.h"
+#import "NSObject+Extensions.h"
 #import "NSObject+Guard.h"
 #import "NSObject+ReplaceNullProperty.h"
 #import "NSTimer+Addition.h"

@@ -39,8 +39,47 @@ TODO: Add long description of the pod here.
   end
 
   s.subspec 'Category' do |category|
-    category.source_files = 'WJBaseComponent/Classes/Category/*.{h,m}'
-    category.public_header_files = 'WJBaseComponent/Classes/Category/*.h'
+
+    category.subspec 'NSObject' do |nsobject|
+         nsobject.source_files = 'WJBaseComponent/Classes/Category/NSObject/*.{h,m}'
+         nsobject.public_header_files = 'WJBaseComponent/Classes/Category/NSObject/*.h'
+    end
+
+    category.subspec 'UIImage' do |image|
+         image.source_files = 'WJBaseComponent/Classes/Category/UIImage/*.{h,m}'
+         image.public_header_files = 'WJBaseComponent/Classes/Category/UIImage/*.h'
+    end
+
+    category.subspec 'UIView' do |view|
+         view.source_files = 'WJBaseComponent/Classes/Category/UIView/*.{h,m}'
+         view.public_header_files = 'WJBaseComponent/Classes/Category/UIView/*.h'
+    end
+
+    category.subspec 'NSTimer' do |nstimer|
+         nstimer.source_files = 'WJBaseComponent/Classes/Category/NSTimer/*.{h,m}'
+         nstimer.public_header_files = 'WJBaseComponent/Classes/Category/NSTimer/*.h'
+    end
+
+    category.subspec 'NSDate' do |nsdate|
+         nsdate.source_files = 'WJBaseComponent/Classes/Category/NSDate/*.{h,m}'
+         nsdate.public_header_files = 'WJBaseComponent/Classes/Category/NSDate/*.h'
+    end
+
+    category.subspec 'NSData' do |nsdata|
+         nsdata.source_files = 'WJBaseComponent/Classes/Category/NSData/*.{h,m}'
+         nsdata.public_header_files = 'WJBaseComponent/Classes/Category/NSData/*.h'
+    end
+
+    category.subspec 'NSJSONSerialization' do |serialization|
+         serialization.source_files = 'WJBaseComponent/Classes/Category/NSJSONSerialization/*.{h,m}'
+         serialization.public_header_files = 'WJBaseComponent/Classes/Category/NSJSONSerialization/*.h'
+    end
+
+    category.subspec 'UIViewController' do |viewController|
+         viewController.source_files = 'WJBaseComponent/Classes/Category/UIViewController/*.{h,m}'
+         viewController.public_header_files = 'WJBaseComponent/Classes/Category/UIViewController/*.h'
+    end
+
   end
 
   s.subspec 'Base' do |ss|

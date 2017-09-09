@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.7.0"
+    "tag": "0.8.0"
   },
   "requires_arc": true,
   "platforms": {
@@ -33,8 +33,48 @@
     },
     {
       "name": "Category",
-      "source_files": "WJBaseComponent/Classes/Category/*.{h,m}",
-      "public_header_files": "WJBaseComponent/Classes/Category/*.h"
+      "subspecs": [
+        {
+          "name": "NSObject",
+          "source_files": "WJBaseComponent/Classes/Category/NSObject/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/NSObject/*.h"
+        },
+        {
+          "name": "UIImage",
+          "source_files": "WJBaseComponent/Classes/Category/UIImage/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/UIImage/*.h"
+        },
+        {
+          "name": "UIView",
+          "source_files": "WJBaseComponent/Classes/Category/UIView/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/UIView/*.h"
+        },
+        {
+          "name": "NSTimer",
+          "source_files": "WJBaseComponent/Classes/Category/NSTimer/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/NSTimer/*.h"
+        },
+        {
+          "name": "NSDate",
+          "source_files": "WJBaseComponent/Classes/Category/NSDate/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/NSDate/*.h"
+        },
+        {
+          "name": "NSData",
+          "source_files": "WJBaseComponent/Classes/Category/NSData/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/NSData/*.h"
+        },
+        {
+          "name": "NSJSONSerialization",
+          "source_files": "WJBaseComponent/Classes/Category/NSJSONSerialization/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/NSJSONSerialization/*.h"
+        },
+        {
+          "name": "UIViewController",
+          "source_files": "WJBaseComponent/Classes/Category/UIViewController/*.{h,m}",
+          "public_header_files": "WJBaseComponent/Classes/Category/UIViewController/*.h"
+        }
+      ]
     },
     {
       "name": "Base",
