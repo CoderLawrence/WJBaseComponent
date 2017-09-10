@@ -29,6 +29,10 @@
 ///统一红色颜色
 #define WJGlobalRadColor (WJColor(245.0f, 80.0f, 83.0f, 1.0f))
 
+//十六进制颜色
+#define WJHexColor(c) ([UIColor colorWithRed:((c>>16)&0xFF)/255.0f green:((c>>8)&0xFF)/255.0f blue:(c&0xFF)/255.0f alpha:1.0f])
+#define WJHexColorA(c, a) ([UIColor colorWithRed:((c>>16)&0xFF)/255.0f green:((c>>8)&0xFF)/255.0f blue:(c&0xFF)/255.0f alpha:a])
+
 // weak strong
 #define __WEAKSELF(X) __weak __typeof(X) weakSelf = X;
 #define __STRONGSELF(X) __strong __typeof(X) strongSelf = X;

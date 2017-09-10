@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = WJGlobalColor;
+    self.navigationController.navigationBar.translucent = NO;
     self.navigationController.fd_prefersNavigationBarHidden = YES;
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
     [SVProgressHUD setMinimumDismissTimeInterval:1.0f];
