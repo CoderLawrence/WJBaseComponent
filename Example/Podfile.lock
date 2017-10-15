@@ -37,6 +37,7 @@ PODS:
   - WJBaseComponent/Base/ViewController (1.0.2):
     - FDFullscreenPopGesture (~> 1.1)
     - SVProgressHUD
+    - WJBaseComponent/Category
     - WJBaseComponent/Macros
   - WJBaseComponent/Category (1.0.2):
     - WJBaseComponent/Category/NSData (= 1.0.2)
@@ -90,7 +91,7 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
-  WJBaseComponent: 53a77fbc0167d8777bd9e9c226eb26a08b7d120e
+  WJBaseComponent: ffe73d60fd684afed884aff92f8bf34c7d5367a2
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: 37e3bfb8a1914fb212e8d4d8f149dbffd147d35f

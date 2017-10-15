@@ -8,7 +8,7 @@
 
 #import "WJNavigationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "UIImage+Extensions.h"
+#import "UIImage+Bundle.h"
 #import "Macros.h"
 
 @interface WJNavigationViewController ()

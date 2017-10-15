@@ -72,6 +72,7 @@ Pod::Spec.new do |s|
        viewController.dependency 'SVProgressHUD'
        viewController.dependency 'FDFullscreenPopGesture', '~> 1.1'
        viewController.dependency 'WJBaseComponent/Macros'
+       viewController.dependency 'WJBaseComponent/Category'
     end
   end
 
