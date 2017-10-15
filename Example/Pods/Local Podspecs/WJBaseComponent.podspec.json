@@ -1,8 +1,7 @@
 {
   "name": "WJBaseComponent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "这是一个基础组件库",
-  "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
   "license": {
     "type": "MIT",
@@ -13,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "1.0.1"
+    "tag": "1.0.2"
   },
   "requires_arc": true,
   "platforms": {

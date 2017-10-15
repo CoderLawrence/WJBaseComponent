@@ -10,6 +10,11 @@
 @implementation UIImage (Bundle)
 
 + (UIImage *)imageWithName:(NSString *)name inBundleName:(NSString *)bundleName bundleForClass:(Class)bundleClass {
+    
+    if (name == nil || bundleName == nil || [bundleClass isEqual:[NSNull class]]) {
+        return nil;
+    }
+    
     @try {
         NSBundle *bundle = [NSBundle bundleForClass:bundleClass];
         NSURL *bundleUrl = [bundle URLForResource:bundleName withExtension:@"bundle"];

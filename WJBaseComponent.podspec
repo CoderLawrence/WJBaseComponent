@@ -3,7 +3,6 @@ Pod::Spec.new do |s|
   s.version          = '1.0.2'
   s.summary          = '这是一个基础组件库'
   s.homepage         = 'https://github.com/CoderLawrence/WJBaseComponent'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'CoderLawrence' => '791785648@qq.com' }
   s.source           = { :git => 'https://github.com/CoderLawrence/WJBaseComponent.git', :tag => s.version.to_s }
