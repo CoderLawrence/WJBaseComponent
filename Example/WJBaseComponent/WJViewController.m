@@ -9,7 +9,6 @@
 #import "WJViewController.h"
 #import <WJBaseComponent/WJBaseComponent.h>
 #import "WJClassInfosResponse.h"
-#import <WJBaseComponent/UIImage+Bundle.h>
 
 @interface WJViewController ()
 

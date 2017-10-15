@@ -22,7 +22,6 @@
 #import "NSObject+Guard.h"
 #import "NSObject+ReplaceNullProperty.h"
 #import "NSTimer+Addition.h"
-#import "UIImage+Bundle.h"
 #import "UIImage+Extensions.h"
 #import "UIView+Frame.h"
 #import "UIViewController+RunDealloc.h"
