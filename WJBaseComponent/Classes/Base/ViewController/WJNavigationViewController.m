@@ -9,6 +9,7 @@
 #import "WJNavigationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "Macros.h"
+#import "UIImage+Bundle.h"
 
 @interface WJNavigationViewController ()
 
@@ -46,7 +47,7 @@
         viewController.hidesBottomBarWhenPushed = YES;
 
         //统一返回按钮样式
-        UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"checkUserType_backward_9x15_.png"]
+        UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithName:@"checkUserType_backward_9x15_" inBundleName:@"WJBaseComponent" bundleForClass:[self class]]
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self
                                                                              action:@selector(navigationBackClick)];

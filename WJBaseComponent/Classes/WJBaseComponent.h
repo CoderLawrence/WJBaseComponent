@@ -18,6 +18,7 @@
 #import "NSObject+Guard.h"
 #import "NSTimer+Addition.h"
 #import "UIImage+Extensions.h"
+#import "UIImage+Bundle.h"
 #import "UIViewController+RunDealloc.h"
 #import "APIStringMacros.h"
 #import "DimensMacros.h"

@@ -1,6 +1,6 @@
 {
   "name": "WJBaseComponent",
-  "version": "0.8.0",
+  "version": "1.0.1",
   "summary": "这是一个基础组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CoderLawrence/WJBaseComponent",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CoderLawrence/WJBaseComponent.git",
-    "tag": "0.8.0"
+    "tag": "1.0.1"
   },
   "requires_arc": true,
   "platforms": {

@@ -20,7 +20,6 @@
 {
     [super viewDidLoad];
     
-    
     WJBaseRequest *request = [[WJBaseRequest alloc] init];
     
     [[WJNetworkConnection networkManager] sendGetRequestWithUrl:@"http://next-retail.scho.com.cn:80/front/xwTypeDefine/queryXwTypeList" requestModel:request responseModel:[WJClassInfosResponse class] beforeSendCallback:^{
@@ -38,6 +37,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)navigationBackClick {
+    
 }
 
 @end

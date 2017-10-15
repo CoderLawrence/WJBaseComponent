@@ -25,50 +25,50 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - FDFullscreenPopGesture (1.1)
-  - Specta (1.0.6)
-  - SVProgressHUD (2.2)
-  - WJBaseComponent (0.8.0):
-    - WJBaseComponent/Base (= 0.8.0)
-    - WJBaseComponent/Category (= 0.8.0)
-    - WJBaseComponent/Macros (= 0.8.0)
-    - WJBaseComponent/Tools (= 0.8.0)
-  - WJBaseComponent/Base (0.8.0):
-    - WJBaseComponent/Base/ViewController (= 0.8.0)
-  - WJBaseComponent/Base/ViewController (0.8.0):
+  - Specta (1.0.7)
+  - SVProgressHUD (2.2.2)
+  - WJBaseComponent (1.0.1):
+    - WJBaseComponent/Base (= 1.0.1)
+    - WJBaseComponent/Category (= 1.0.1)
+    - WJBaseComponent/Macros (= 1.0.1)
+    - WJBaseComponent/Tools (= 1.0.1)
+  - WJBaseComponent/Base (1.0.1):
+    - WJBaseComponent/Base/ViewController (= 1.0.1)
+  - WJBaseComponent/Base/ViewController (1.0.1):
     - FDFullscreenPopGesture (~> 1.1)
     - SVProgressHUD
     - WJBaseComponent/Macros
-  - WJBaseComponent/Category (0.8.0):
-    - WJBaseComponent/Category/NSData (= 0.8.0)
-    - WJBaseComponent/Category/NSDate (= 0.8.0)
-    - WJBaseComponent/Category/NSJSONSerialization (= 0.8.0)
-    - WJBaseComponent/Category/NSObject (= 0.8.0)
-    - WJBaseComponent/Category/NSTimer (= 0.8.0)
-    - WJBaseComponent/Category/UIImage (= 0.8.0)
-    - WJBaseComponent/Category/UIView (= 0.8.0)
-    - WJBaseComponent/Category/UIViewController (= 0.8.0)
-  - WJBaseComponent/Category/NSData (0.8.0)
-  - WJBaseComponent/Category/NSDate (0.8.0)
-  - WJBaseComponent/Category/NSJSONSerialization (0.8.0)
-  - WJBaseComponent/Category/NSObject (0.8.0)
-  - WJBaseComponent/Category/NSTimer (0.8.0)
-  - WJBaseComponent/Category/UIImage (0.8.0)
-  - WJBaseComponent/Category/UIView (0.8.0)
-  - WJBaseComponent/Category/UIViewController (0.8.0)
-  - WJBaseComponent/Macros (0.8.0)
-  - WJBaseComponent/Tools (0.8.0):
-    - WJBaseComponent/Tools/Network (= 0.8.0)
-    - WJBaseComponent/Tools/WJUserDefaults (= 0.8.0)
-  - WJBaseComponent/Tools/Network (0.8.0):
-    - WJBaseComponent/Tools/Network/Base (= 0.8.0)
-    - WJBaseComponent/Tools/Network/Core (= 0.8.0)
-  - WJBaseComponent/Tools/Network/Base (0.8.0)
-  - WJBaseComponent/Tools/Network/Core (0.8.0):
+  - WJBaseComponent/Category (1.0.1):
+    - WJBaseComponent/Category/NSData (= 1.0.1)
+    - WJBaseComponent/Category/NSDate (= 1.0.1)
+    - WJBaseComponent/Category/NSJSONSerialization (= 1.0.1)
+    - WJBaseComponent/Category/NSObject (= 1.0.1)
+    - WJBaseComponent/Category/NSTimer (= 1.0.1)
+    - WJBaseComponent/Category/UIImage (= 1.0.1)
+    - WJBaseComponent/Category/UIView (= 1.0.1)
+    - WJBaseComponent/Category/UIViewController (= 1.0.1)
+  - WJBaseComponent/Category/NSData (1.0.1)
+  - WJBaseComponent/Category/NSDate (1.0.1)
+  - WJBaseComponent/Category/NSJSONSerialization (1.0.1)
+  - WJBaseComponent/Category/NSObject (1.0.1)
+  - WJBaseComponent/Category/NSTimer (1.0.1)
+  - WJBaseComponent/Category/UIImage (1.0.1)
+  - WJBaseComponent/Category/UIView (1.0.1)
+  - WJBaseComponent/Category/UIViewController (1.0.1)
+  - WJBaseComponent/Macros (1.0.1)
+  - WJBaseComponent/Tools (1.0.1):
+    - WJBaseComponent/Tools/Network (= 1.0.1)
+    - WJBaseComponent/Tools/WJUserDefaults (= 1.0.1)
+  - WJBaseComponent/Tools/Network (1.0.1):
+    - WJBaseComponent/Tools/Network/Base (= 1.0.1)
+    - WJBaseComponent/Tools/Network/Core (= 1.0.1)
+  - WJBaseComponent/Tools/Network/Base (1.0.1)
+  - WJBaseComponent/Tools/Network/Core (1.0.1):
     - AFNetworking
     - SVProgressHUD
     - WJBaseComponent/Tools/Network/Base
     - YYModel
-  - WJBaseComponent/Tools/WJUserDefaults (0.8.0)
+  - WJBaseComponent/Tools/WJUserDefaults (1.0.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -88,9 +88,9 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
-  SVProgressHUD: 3f37f3409ddb15f35c99315ae7dc33c474aa3256
-  WJBaseComponent: 0cc6580545f76f88ff46aa348942b2279c9e86ac
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  WJBaseComponent: 063945765e86b272c00a45ddff68a97bccb8536a
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: 37e3bfb8a1914fb212e8d4d8f149dbffd147d35f
